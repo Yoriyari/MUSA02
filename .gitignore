@@ -1,4 +1,4 @@
-.git/*
+.*
 cogs/__pycache__/*
 common/__pycache__/*
 secrets/*
