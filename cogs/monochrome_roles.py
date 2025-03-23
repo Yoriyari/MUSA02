@@ -5,7 +5,8 @@
 # Update History
 # ..............................................................................
 # 23 Mar 2025 - v1.1.1; Hid Discord user IDs and server IDs from file. Updated
-#               error handling. -YY
+#               error handling. Enumerated pronouns roles. Updated pronouns and
+#               aliases for Azu's facets and Onyx. -YY
 # 27 Apr 2024 - v1.1.0; Moved named/coloured roles to the new personal roles
 #               feature's automated presets, leaving only pronouns roles. -YY
 # 23 Apr 2024 - v1.0.11; Split Azu role into white, green, and all. -YY
@@ -41,6 +42,8 @@ from discord.ext import commands
 from common.private_ids import discord_id, guild_id
 from common.error_message import send_error
 
+from enum import Enum
+
 #-------------------------------------------------------------------------------
 
 #Define names and roles
@@ -49,35 +52,43 @@ class Monochrome:
         self.names = names
         self.roles = roles
 
+class Pronouns(Enum):
+    HE_HIM = 1034197313381470291
+    SHE_HER = 1034197338266279976
+    THEY_THEM = 1034197359283949680
+    IT_ITS = 1034197383933861898
+    SHE_HER_CAPITALIZED = 1179824991194320946
+    E_EIR = 1179823318442967142
+    IX_IX = 1179823382611632220
+    ANY = 1034197390955130982
+
 #Cog Setup
 class MonochromeRoles(commands.Cog):
     def __init__(self,client):
         self.client = client
         self.monochrome = discord_id("monochrome", "monochrome alt")
         self.whitelisted_server = guild_id("tits")
-        self.roles = { 1034197313381470291, 1034197338266279976, 1034197359283949680, 1034197383933861898,
-                       1034197390955130982, 1179824991194320946, 1179823318442967142, 1179823382611632220,
-                       1218479394063122512
-                     }
-        self.system = { Monochrome({"Aries", "Anya", "Holly"}, {1034197338266279976, 1034197313381470291}), #Aries, She/her, He/him
-                        Monochrome({"Azu", "Carnelian"}, {1034197359283949680}), #Azu (All), They/them
-                        Monochrome({"Sera", "Serafina"}, {1034197359283949680, 1034197383933861898}), #Azu (White), They/them, It/its
-                        Monochrome({"Ivy"}, {1034197359283949680}), #Azu (Green), They/them
-                        Monochrome({"Aurora", "Day", "Nadia"}, {1179823318442967142, 1034197338266279976}), #Aurora, E/Eir, She/her
-                        Monochrome({"Athame", "Dawn", "Ashley", "Ash"}, {1179823318442967142, 1034197359283949680}), #Athame, E/Eir, They/them
-                        Monochrome({"Aeon", "Dusk", "Ace"}, {1179823318442967142, 1034197383933861898}), #Aeon, A/eir, It/its
-                        Monochrome({"Ema"}, {1179824991194320946}), #Ema, She/Her (caps)
-                        Monochrome({"Tempest", "Atmos"}, {1179823382611632220}), #Tempest, Ix/ix'
-                        Monochrome({"Poppy"}, {1034197338266279976}), #Poppy, She/her
-                        Monochrome({"Neon"}, {1034197383933861898}), #Neon, It/its
-                        Monochrome({"Rosé"}, {1034197338266279976}), #Rosé, She/her
-                        Monochrome({"Fang"}, {1034197359283949680}), #Fang, They/them
-                        Monochrome({"Gaige"}, {1034197390955130982}), #Gaige, Any
-                        Monochrome({"Glitter"}, {1034197338266279976}), #Glitter, She/her
-                        Monochrome({"Kira"}, {1034197383933861898}), #Kira, It/its
-                        Monochrome({"Skye"}, {1034197359283949680}), #[Skye], They/them
-                        Monochrome({"Katya"}, {1034197338266279976}), #Katya, She/her
-                        Monochrome({"Monochrome"}, {1034197359283949680}) #[Monochrome], They/them
+        self.system = { Monochrome(         {"Aries", "Anya", "Holly"}, {Pronouns.SHE_HER, Pronouns.HE_HIM}),
+                        Monochrome(                            {"Azu"}, {Pronouns.THEY_THEM}),
+                        Monochrome(    {"Sera", "Serafina", "Mercury"}, {Pronouns.IT_ITS}),
+                        Monochrome(                   {"Ivy", "Verde"}, {Pronouns.THEY_THEM}),
+                        Monochrome(                      {"Carnelian"}, {Pronouns.THEY_THEM}),
+                        Monochrome(         {"Aurora", "Day", "Nadia"}, {Pronouns.E_EIR, Pronouns.SHE_HER}),
+                        Monochrome({"Athame", "Dawn", "Ashley", "Ash"}, {Pronouns.E_EIR, Pronouns.THEY_THEM}),
+                        Monochrome(            {"Aeon", "Dusk", "Ace"}, {Pronouns.E_EIR, Pronouns.IT_ITS}),
+                        Monochrome(                            {"Ema"}, {Pronouns.SHE_HER_CAPITALIZED}),
+                        Monochrome(               {"Tempest", "Atmos"}, {Pronouns.IX_IX}),
+                        Monochrome(                          {"Poppy"}, {Pronouns.SHE_HER}),
+                        Monochrome(                           {"Neon"}, {Pronouns.IT_ITS}),
+                        Monochrome(                           {"Rosé"}, {Pronouns.SHE_HER}),
+                        Monochrome(                           {"Fang"}, {Pronouns.THEY_THEM}),
+                        Monochrome(                          {"Gaige"}, {Pronouns.ANY}),
+                        Monochrome(                        {"Glitter"}, {Pronouns.SHE_HER}),
+                        Monochrome(                           {"Kira"}, {Pronouns.IT_ITS}),
+                        Monochrome(                           {"Skye"}, {Pronouns.THEY_THEM}),
+                        Monochrome(                          {"Katya"}, {Pronouns.SHE_HER}),
+                        Monochrome(                           {"Onyx"}, {Pronouns.IT_ITS}),
+                        Monochrome(                     {"Monochrome"}, {Pronouns.THEY_THEM})
                       }
 
     @commands.Cog.listener()
@@ -95,7 +106,8 @@ class MonochromeRoles(commands.Cog):
                 for headmate in self.system:
                     if display_name in headmate.names:
                         current_roles = {role.id for role in message.author.roles}
-                        roles_to_remove = current_roles & self.roles - headmate.roles
+                        all_roles = {role.value for role in Pronouns}
+                        roles_to_remove = current_roles & all_roles - headmate.roles
                         roles = (discord.Object(role) for role in headmate.roles)
                         if roles:
                             await message.author.add_roles(*roles)
