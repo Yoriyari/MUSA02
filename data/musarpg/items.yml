@@ -1,0 +1,87 @@
+#  = File Structure =
+# Each item dict includes:
+#   'name': singular noun, defaults to item key
+#   'plural': plural noun, defaults to name suffixed with -s
+#   'article': indefinite article, defaults to "a"/"an" for names starting with consonants/vowels respectively
+#
+#  = Still Workshopping Everything Below =
+#
+# Items have several attributes used to compute their traits and combat effectiveness, e.g.
+# - Pointiness (very pointy like spears)
+# - Sharpness (sharp like blades, razors)
+# - Firmness (floppy like plushie, firm like mace)
+# - Flammability?
+# - Weight (integer. modifies inventory capacity, bludgeoning damage...)
+#
+# Other attributes are mostly just cosmetics, like
+# - Shape ("shaped like a pumpkin", primarily for custom crafts)
+# - Colour (blue, black, etc)
+# - ...
+#
+# Player stats contribute to combat effectiveness too, like strength.
+
+plushie:
+pumpkin:
+    abilities:
+        - consumable
+warhammer:
+mace:
+skull:
+apple:
+    abilities:
+        - consumable
+unicycle:
+    article: a
+bat (weapon):
+    name: bat
+violin:
+bottle:
+egg:
+    abilities:
+        - consumable
+shortsword:
+helmet:
+dagger:
+athame:
+flower:
+    abilities:
+        - consumable
+scissors:
+    plural: scissors
+    article: a pair of
+mushroom:
+    abilities:
+        - consumable
+branch:
+    plural: branches
+rock:
+anvil:
+cog:
+camera:
+playing card:
+glasses:
+    plural: glasses
+    article: a pair of
+jeans:
+    plural: jeans
+    article: a pair of
+shorts:
+    plural: shorts
+    article: a pair of
+umbrella:
+razor:
+sickle:
+scalpel:
+bald cap:
+wig:
+glove:
+cue ball:
+fish:
+    abilities:
+        - consumable
+garden gnome:
+fishing rod:
+lipstick:
+pickaxe:
+shovel:
+flag:
