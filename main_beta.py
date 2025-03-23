@@ -2,10 +2,12 @@
 import discord
 from discord.ext import commands
 from common.prefix import get_prefix_of_guild
+from common.private_ids import discord_id
 import os, asyncio
 
 #Bot Key
 KEY_FILE = "secrets/key_beta_discord.txt"
+YORI_ID = discord_id("yori")
 
 ##Define client and command prefix
 def get_prefix(client, ctx):
@@ -34,16 +36,22 @@ client.remove_command("help")
 ##(Re)load Cogs
 @client.command(aliases=[])
 async def unload(ctx, extension):
+    if ctx.author.id != YORI_ID:
+        return
     await client.unload_extension(f'cogs.{extension}')
     print(f'Unloaded {extension} cog.')
 
 @client.command(aliases=[])
 async def load(ctx, extension):
+    if ctx.author.id != YORI_ID:
+        return
     await client.load_extension(f'cogs.{extension}')
     print(f'Loaded {extension} cog.')
 
 @client.command(aliases=["refresh"])
 async def reload(ctx, extension):
+    if ctx.author.id != YORI_ID:
+        return
     await client.unload_extension(f'cogs.{extension}')
     await client.load_extension(f'cogs.{extension}')
     print(f'Reloaded {extension} cog.')
@@ -51,6 +59,8 @@ async def reload(ctx, extension):
 #Reloading all cogs
 @client.command(aliases=["reloadall", "refreshall", "refresh_all"])
 async def reload_all(ctx):
+    if ctx.author.id != YORI_ID:
+        return
     for filename in os.listdir('./cogs'):
         if filename.endswith('.py'):
             await client.unload_extension(f'cogs.{filename[:-3]}')
@@ -60,6 +70,8 @@ async def reload_all(ctx):
 #Sync slash commands
 @client.command(aliases=[])
 async def sync(ctx):
+    if ctx.author.id != YORI_ID:
+        return
     synced = await client.tree.sync()
     print(f"Synced {len(synced)} slash command(s).")
 
