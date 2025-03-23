@@ -1,0 +1,6 @@
+discord[voice]
+steam[client]
+fuzzywuzzy
+python-Levenshtein
+emoji
+pillow

@@ -1,0 +1,665 @@
+help:
+    aliases: ["information", "help", "info", "instructions", "?"]
+    message: "
+        __**MUSA02 Features**__ ₍₂₀₂₀₋₂₀₂₅₎
+        \n**Voice Chat**
+        \n`!play` - Play videos, audios or YouTube playlists in voice chat.
+        \n`!say` - Play text-to-speech dialogue in voice chat.
+        \n`!bind` - Play all future messages in this channel as text-to-speech.
+        \nThere's also `!volume`, `!shuffle`, `!loop`, `!pause`, `!resume`, `!skip` `!stop`, `!join`, `!unbind` and `!leave`.
+        \nSee `!help vc`.
+        \n
+        \n**Games**
+        \n`!mainmenu` - List the available games below.
+        \n`!bj` - Blackjack.
+        \n`!cah` - Cards Against Humanity.
+        \n`!ch` - Checkers.
+        \n`!c4` - Connect Four.
+        \n`!hm` - Hangman.
+        \n`!mm` - Mastermind.
+        \n`!rps` - Rock Paper Scissors.
+        \n`!ttt` - Tic-Tac-Toe.
+        \n
+        \n**Dungeons & Dragons**
+        \n`!dnd` - List the three menus below.
+        \n`!class` - Browse all classes from D&D 5e.
+        \n`!item` - Browse items from the PHB of D&D 5e.
+        \n`!spell` - Browse all spells from D&D 5e.
+        \n`!domt` - Draw from the Deck of Many Things.
+        \n
+        \n**Game Utility**
+        \n`!card` - Draw playing cards.
+        \n`!deck` - Draw from a playing card deck shared between users.
+        \n`!tarot` - Draw tarot cards.
+        \n`!roll` - Roll dice.
+        \n
+        \n**Administrative Utility**
+        \n`!prefix` - Change the command prefix(es) used in the current server.
+        \n`!setrole` - Manage your own cosmetic role.
+        \n`!roles` - Set up a message to let users assign or remove specific roles.
+        \n`!help` - Show this message. Specify a command after it to get a detailed explanation.
+        \n
+        \n**Other Features**
+        \n`!video` - Look up a YouTube video.
+        \n`!choose` - Pick from a list of options.
+        \n`!reorder` - Shuffle a list of options.
+        \n`!steam` - Name a random game from a Steam library.
+        \n`!attendance` - Post a list for users to add themselves to.
+        \n`!note` - Store text for future retrieval.
+        \n`!fesh` - Get a random quote from the Fesh Pince of Blair.
+        \n`!clow` - Draw clow cards from Cardcaptor Sakura.
+        \n`!8ball` - Get a random answer from a magic 8 ball.
+        \n`!flip` - Flip a coin.
+        \n`!counter` - A shiny red button.
+        \n`!feed` - Feed.
+        \n`!kill` - Generate a random death for a specified target.
+        \nThere's also a couple of random phrases I will respond to, like \"Hello MUSA.\"
+        "
+voice:
+    aliases: ["voice", "vc", "voicechannel", "voicechat", "voice_channel", "voice_chat"]
+    message: "
+        __**MUSA02 Feature: Voice Chat**__ ₍₂₀₂₁₋₂₀₂₃₎
+        \n- `!play <url>`: Play video or audio from most sites in voice chat, with YouTube playlist compatability. Queues audio if something is already playing.
+        \n- `!say <text>`: Play text-to-speech dialogue in voice chat.
+        \n- `!bind`: Play all future messages in this channel as text-to-speech.
+        \n- `!unbind`: Undoes `!bind`.
+        \n- `!volume <number>`: Lower or raise the volume of audio played with `!play`.
+        \n- `!pause`: Pauses the currently-playing audio without clearing the queue.
+        \n- `!resume`: Unpauses the currently-playing audio.
+        \n- `!skip [number]`: End currently-playing audio and move to the next audio in the queue. Optionally specify a number to skip some of the queue too.
+        \n- `!stop`: End currently-playing audio and wipes the queue.
+        \n- `!shuffle`: Randomizes the order of everything currently in the queue.
+        \n- `!loop`: Toggle whether all audio is inserted at the end of the queue once it finishes playing.
+        \n- `!join`: Makes me connect to your current voice channel.
+        \n- `!leave`: Makes me disconnect from your current voice channel.
+        "
+blackjack:
+    aliases: ["blackjack", "bj", "21"]
+    message: "
+        __**MUSA02 Feature: Blackjack**__ ₍₂₀₂₁₎
+        \n`!blackjack` or `!bj`
+        \nExample usage: `!bj new`
+        \nCollect cards in your hand that exceed the secret value of the dealer's hand, but don't go over 21! Face cards are worth 10, and aces are worth either 11 or 1. Hit to receive a card, stand to confirm you are done hitting. Double down to double your bet and receive one final card.
+        \n- `!bj new`: Host a new room.
+        \n- `!bj set`: Get details on how to edit the game settings of a room.
+        \n- `!bj join <room id>`: Join an existing room.
+        \n- `!bj start [room id]`: Start the game of the room you're in.
+        \n- `!bj players <room id>`: Get a list of players in an existing room.
+        \n- `!bj bet <amount>`: Bet an amount of currency in the room you're in.
+        \n- `!bj quit [room id / \"all\"]`: Quit the room you're in. If you're in multiple, append a specific room ID or \"all\" to quit. The game continues if other players remain.
+        "
+cah:
+    aliases: ["cah", "cardsagainsthumanity"]
+    message: "
+        __**MUSA02 Feature: CAH**__ ₍₂₀₂₁₎
+        \n`!cardsagainsthumanity` or `!cah`
+        \nExample usage: `!cah join`
+        \nWarning: Currently supports only one active game. Badly needs to be reworked.
+        \nPlay Cards Against Humanity through DMs! Each player receives a collection of cards containing phrases. Each round, a prompt is shown and all but one players fill in its blanks with the most amusing phrase they can muster. The one player left out decides which phrase is the most amusing. First player to reach the score threshold wins! Game is played through DM reactions.
+        \n- `!cah join`: Join the game.
+        \n- `!cah start <deck> [deck 2, ...]`: Starts the game, once everyone is in. Specify the name(s) of the deck(s) you'd like to use, such as 'red' or 'crabs default'.
+        \n- `!cah decks`: Get available decks.
+        \n- `!cah quit`: Force the game to stop.
+        "
+checkers:
+    aliases: ["checkers", "ch", "chck", "checker", "draughts"]
+    message: "
+        __**MUSA02 Feature: Checkers**__ ₍₂₀₂₁₎
+        \n`!checkers` or `!draughts` or `!ch`
+        \nExample usage: `!ch new`
+        \nCapture all opponent tokens! Your tokens can move one space diagonally each turn, or capture an adjacent opponent piece by jumping over it. If you can capture, you must. If a token reaches the end of the board, it gains the ability to move multiple spaces and move backwards. The game will automatically start when it has two players.
+        \n- `!ch new`: Host a new room.
+        \n- `!ch join <room id>`: Join an existing room. This also starts the game.
+        \n- `!ch players <room id>`: Get a list of players in an existing room.
+        \n- `!ch quit [room id / \"all\"]`: Quit the room you're in. If you're in multiple, append a specific room ID or \"all\" to quit.
+        "
+connectfour:
+    aliases: ["connectfour", "c4", "cf", "connect4", "connect_four", "connect_4", "4row", "fourinarow", "four_in_a_row", "4inarow", "4_in_a_row"]
+    message: "
+        __**MUSA02 Feature: Connect Four**__ ₍₂₀₂₁₎
+        \n`!connectfour` or `!cf` or `!c4`
+        \nExample usage: `!c4 new`
+        \nA game where two players take turns dropping their token to the bottom of a column in a six-by-seven grid. The first player to line up four of their tokens wins! The game will automatically start when it has two players.
+        \n- `!c4 new`: Host a new room.
+        \n- `!c4 join <room id>`: Join an existing room. This also starts the game.
+        \n- `!c4 players <room id>`: Get a list of players in an existing room.
+        \n- `!c4 quit [room id / \"all\"]`: Quit the room you're in. If you're in multiple, append a specific room ID or \"all\" to quit.
+        "
+hangman:
+    aliases: ["hangman", "hm"]
+    message: "
+        __**MUSA02 Feature: Hangman**__ ₍₂₀₂₁₎
+        \n`!hangman` or `!hm`
+        \nExample usage: `!hm new`
+        \nGuess the secret word, one character at a time. But don't make too many mistakes, or you'll hang!
+        \n- `!hm new`: Host a new room.
+        \n- `!hm set`: Get details on how to edit the game settings of a room.
+        \n- `!hm join <room id>`: Join an existing room.
+        \n- `!hm start [room id]`: Start the game of the room you're in.
+        \n- `!hm players <room id>`: Get a list of players in an existing room.
+        \n- `!hm guess <character>`: Guess a character on your turn.
+        \n- `!hm quit [room id / \"all\"]`: Quit the room you're in. If you're in multiple, append a specific room ID or \"all\" to quit. The game continues if other players remain.
+        "
+mastermind:
+    aliases: ["mastermind", "mm"]
+    message: "
+        __**MUSA02 Feature: Mastermind**__ ₍₂₀₂₀₋₂₀₂₃₎
+        \n`!mastermind` or `!mm`
+        \nExample usage: `!mm new`
+        \nIn this game, it is your job to deduce a secret four-digit code by guessing four-digit codes. Your only hint to the correct code is feedback on which guessed digits are in the secret code, and how many of those are in the correct position. The same digit can appear multiple times. You have 10 rounds to guess the secret code. The game continues until you're out of rounds. The rounds get reset when you guess the code, and a new code gets generated. The faster you guess the code, the more points you receive. You can keep extending a winning streak infinitely. There is no time limit on the game and you may put it down and resume at any time. Try to get the high score!
+        \n- `!mm new`: Start a new game.
+        \n- `!mm guess <code>`: Guess codes by typing four digits.
+        \n- `!mm highscore`: Displays current high scores.
+        \n- `!mm quit`: Ends your game early.
+        "
+tictactoe:
+    aliases: ["tictactoe", "ttt", "tic-tac-toe"]
+    message: "
+        __**MUSA02 Feature: Tic-tac-toe**__ ₍₂₀₂₁₎
+        \n`!tictactoe` or `!ttt`
+        \nExample usage: `!ttt new`
+        \nA game where two players take turns marking spaces in a three-by-three grid to try and get three of their marks in one line. The game will automatically start when it has two players.
+        \n- `!ttt new`: Host a new room.
+        \n- `!ttt join <room id>`: Join an existing room. This also starts the game.
+        \n- `!ttt players <room id>`: Get a list of players in an existing room.
+        \n- `!ttt quit [room id / \"all\"]`: Quit the room you're in. If you're in multiple, append a specific room ID or \"all\" to quit.
+        "
+card:
+    aliases: ["card", "cards"]
+    message: "
+        __**MUSA02 Feature: Card**__ ₍₂₀₂₀₋₂₀₂₃₎
+        \n`!cards` or `!card`
+        \nExample usage: `!card 3`
+        \nGenerate random playing cards. Optionally specify a number to draw multiple cards. Duplicate cards may be generated, see `!deck` if this should not be the case.
+        \n- `!card draw [number]`: Generates an amount of random playing cards.
+        \n- `!card [number]`: Alias of `!card draw`.
+        \n- `!card show <card>`: Show a single card emoji with the specified card suit and value, such as `10 of Clubs`.
+        "
+deck:
+    aliases: ["deck", "decks"]
+    message: "
+        __**MUSA02 Feature: Deck**__ ₍₂₀₂₀₎
+        \n`!decks` or `!deck`
+        \nExample usage: `!deck shuffle 2`
+        \nExtra function to draw playing cards from a universally shared deck. Shuffle any amount of decks together, which will be shared between all users. This prevents users from drawing the same cards. Cards are drawn face-down by default, allowing users to play card games with private hands.
+        \n- `!deck shuffle [number]`: Shuffles an amount of playing card decks together. This clears all hands.
+        \n- `!deck draw [number]`: Draws an amount of cards from the deck face-down.
+        \n- `!deck drawup [number]`: Draws an amount of cards from the deck face-up.
+        \n- `!deck hand`: Reveals all cards drawn face-down by you.
+        \n- `!deck handup`: Reveals all cards drawn face-up by you.
+        \n- `!deck discard <card>`: Discards a card in your face-down hand with the specified card suit and numeric value, such as \"1S\" for the Ace of Spades.
+        \n- `!deck add <card>`: Adds a card to your face-down hand with the specified card suit and numeric value, such as \"12H\" for the Queen of Hearts.
+        "
+tarot:
+    aliases: ["tarot"]
+    message: "
+        __**MUSA02 Feature: Tarot**__ ₍₂₀₂₀₋₂₀₂₃₎
+        \n`!tarot`
+        \nExample usage: `!tarot 3`
+        \nGenerate random tarot cards. Optionally specify a number to draw multiple cards. Duplicate cards are avoided in the same draw, but may happen between different draws. Comes with upright/reversed card orientation and an optional list of common fortune interpretations for drawn cards.
+        \n- `!tarot draw [number]`: Draws an amount of tarot cards.
+        \n- `!tarot [number]`: Alias of `!tarot draw`.
+        \n- `!tarot minor [number]`: Draws an amount of cards from the minor arcana.
+        \n- `!tarot major [number]`: Draws an amount of cards from the major arcana.
+        "
+roll:
+    aliases: ["roll", "r", "math", "calculate", "calculator", "calc", "compute", "solve"]
+    message: "
+        __**MUSA02 Feature: Roll**__ ₍₂₀₂₂₎
+        \n`!roll` or `!r`
+        \nExample usage: `!r 1d20`
+        \nSpecify the amount of dice and sides of each die in the format XdY. For instance, four twenty-sided die is `4d20`.
+        \nMultiple types of dice can be rolled together by appending them with a plus sign (`+`) between each, such as `1d6+1d8`.
+        \nSimilarly, dice can be subtracted from (`-`), multiplied with (`*`), or divided by (`/`) one another as well. Parentheses (`()`) also work.
+        \nFinally, you can roll with advantage or disadvantage by writing \"`adv`\" or \"`dis`\" after the dice formula. This will roll twice and, respectively, take the highest or lowest result.
+        "
+play:
+    aliases: ["play", "p", "queue"]
+    message: "
+        __**MUSA02 Feature: Play**__ ₍₂₀₂₁₋₂₀₂₃₎
+        \n`!play` or `!p`
+        \nExample usage: `!p gangnam style`
+        \nPlays a video or audio link in your current voice channel, such as from YouTube. Supports search queries and direct links. Supports YouTube playlists. Will queue up audio if something is already playing.
+        "
+say:
+    aliases: ["say", "speak"]
+    message: "
+        __**MUSA02 Feature: Say**__ ₍₂₀₂₁₋₂₀₂₃₎
+        \n`!say`
+        \nExample usage: `!say By all known laws of aviation`
+        \nPlays a text-to-speech message in your current voice channel. Will queue up audio if something is already playing.
+        "
+volume:
+    aliases: ["volume", "vol"]
+    message: "
+        __**MUSA02 Feature: Volume**__ ₍₂₀₂₁₋₂₀₂₃₎
+        \n`!volume` or `!vol`
+        \nExample usage: `!vol 100`
+        \nRaise or lower the volume of audio played in your current voice channel. Ranges from 0% to 500%.
+        "
+shuffle:
+    aliases: ["shuffle"]
+    message: "
+        __**MUSA02 Feature: Shuffle**__ ₍₂₀₂₁₋₂₀₂₃₎
+        \n`!shuffle`
+        \nExample usage: `!shuffle`
+        \nShuffles the order of currently queued content in your current voice channel.
+        "
+pause:
+    aliases: ["pause"]
+    message: "
+        __**MUSA02 Feature: Pause**__ ₍₂₀₂₁₋₂₀₂₃₎
+        \n`!pause`
+        \nExample usage: `!pause`
+        \nPauses audio played in your current voice channel. Unpause with `!resume`.
+        "
+resume:
+    aliases: ["resume", "unpause"]
+    message: "
+        __**MUSA02 Feature: Resume**__ ₍₂₀₂₁₋₂₀₂₃₎
+        \n`!resume` or `!unpause`
+        \nExample usage: `!resume`
+        \nUnpauses audio in your current voice channel.
+        "
+skip:
+    aliases: ["skip", "next"]
+    message: "
+        __**MUSA02 Feature: Skip**__ ₍₂₀₂₁₋₂₀₂₃₎
+        \n`!skip` or `!next`
+        \nExample usage: `!skip`
+        \nEnds the audio currently played in your current voice channel and plays the next if any is queued up.
+        "
+stop:
+    aliases: ["stop", "silence", "quiet", "shutup", "shut_up", "shut"]
+    message: "
+        __**MUSA02 Feature: Stop**__ ₍₂₀₂₁₋₂₀₂₃₎
+        \n`!stop`
+        \nExample usage: `!stop`
+        \nEnds the audio currently played in your current voice channel as well as clearing the play queue.
+        "
+join:
+    aliases: ["connect", "join"]
+    message: "
+        __**MUSA02 Feature: Join**__ ₍₂₀₂₁₋₂₀₂₃₎
+        \n`!join` or `!connect`
+        \nExample usage: `!join`
+        \nMakes me join your current voice channel.
+        "
+leave:
+    aliases: ["disconnect", "leave", "quit"]
+    message: "
+        __**MUSA02 Feature: Leave**__ ₍₂₀₂₁₋₂₀₂₃₎
+        \n`!leave` or `!disconnect`
+        \nExample usage: `!leave`
+        \nMakes me leave your current voice channel.
+        "
+prefix:
+    aliases: ["prefix", "prefixes"]
+    message: "
+        __**MUSA02 Feature: Prefix**__ ₍₂₀₂₁₎
+        \n`!prefix` or `!prefixes`
+        \nExample usage: `!prefix set !`
+        \nChanges the prefix(es) used to invoke commands in the current server.
+        \n- `!prefix set <symbol> [symbol 2, ...]`: Replaces the current server's prefix(es). Multiple prefixes can be supplied, separated by spaces.
+        \n- `!prefix add <symbol> [symbol 2, ...]`: Adds to the current server's prefix(es). Multiple prefixes can be supplied, separated by spaces.
+        "
+video:
+    aliases: ["video", "vid", "youtube", "yt"]
+    message: "
+        __**MUSA02 Feature: Video**__ ₍₂₀₂₂₎
+        \n`!video` or `!vid` or `!youtube` or `!yt`
+        \nExample usage: `!yt Never Gonna Give You Up`
+        \nLooks up a YouTube video using the query submitted after the command and posts it in chat.
+        "
+choose:
+    aliases: ["choose", "choice", "pick"]
+    message: "
+        __**MUSA02 Feature: Choose**__ ₍₂₀₂₁₋₂₀₂₂₎
+        \n`!choose` or `!choice` or `!pick`
+        \nExample usage: `!choose Option 1, Option 2`
+        \nChooses a random option from the options supplied after the command itself. Options are separated by commas, unless no commas are included, in which case they are separated by spaces.
+        "
+fesh:
+    aliases: ["fesh", "feshpince", "pince", "fesh_pince"]
+    message: "
+        __**MUSA02 Feature: Fesh**__ ₍₂₀₂₀₎
+        \n`!fesh`
+        \nExample usage: `!fesh`
+        \nQuotes a random line from the Fesh Pince of Blair.
+        "
+mainmenu:
+    aliases: ["mainmenu", "main_menu", "main", "menu", "games_list", "game_list", "gameslist", "gamelist"]
+    message: "
+        __**MUSA02 Feature: Games**__ ₍₂₀₂₁₎
+        \n`!mainmenu` or `!gameslist`
+        \nExample usage: `!mainmenu`
+        \nLists the available in-chat games, including a few quick game room creation options.
+        "
+counting:
+    aliases: ["counter", "counting", "count", "button"]
+    message: "
+        __**MUSA02 Feature: Counter**__ ₍₂₀₂₂₎
+        \n`!counter` or `!button`
+        \nExample usage: `!counter`
+        \nCreates a shiny red button that'll show how many times it has ever been pressed by anyone.
+        "
+feed:
+    aliases: ["feed", "eat"]
+    message: "
+        __**MUSA02 Feature: Feed**__ ₍₂₀₂₂₋₂₀₂₃₎
+        \n`!feed`
+        \nExample usage: `!feed`
+        \nFeeds me. Specify something after the command to feed me something specific.
+        "
+unfeed:
+    aliases: ["unfeed", "uneat"]
+    message: "
+        __**MUSA02 Feature: Unfeed**__ ₍₂₀₂₂₎
+        \n`!unfeed`
+        \nExample usage: `!unfeed`
+        \nUnfeeds me.
+        "
+bind:
+    aliases: ["bind"]
+    message: "
+        __**MUSA02 Feature: Bind**__ ₍₂₀₂₂₋₂₀₂₃₎
+        \n`!bind`
+        \nExample usage: `!bind`
+        \nIn the channel in which this command is used, all future text messages will be played in voice chat using text-to-speech until unbound. Text-to-speech messages will be queued up if something is already playing. Also see `!unbind`.
+        "
+unbind:
+    aliases: ["unbind"]
+    message: "
+        __**MUSA02 Feature: Unbind**__ ₍₂₀₂₂₋₂₀₂₃₎
+        \n`!unbind`
+        \nExample usage: `!unbind`
+        \nStops future text messages from being spoken in voice chat using text-to-speech. Also see `!bind`.
+        "
+addping:
+    aliases: ["addping", "ap", "ping", "pingfor", "ping4", "add_ping", "ping_for", "pingadd", "ping_add", "pa"]
+    message: "
+        __**MUSA02 Feature: Add Ping**__ ₍₂₀₂₂₎
+        \n`!addping` or `!ping` or `!ap`
+        \nExample usage: `!ap One Piece`
+        \nThis feature is designed to be used in conjunction with the character roulette bot Mudae.
+        \nSpecify a series title after the command in order to be pinged every time a series title that (at least partially) matches is rolled by Mudae. Itacilize the entry to only be pinged for a perfect match. Add multiple titles at the same time by separating each title with $-symbols. Also see `!preciseping`, `!removeping`, `!pinglist`.
+        \n**Make sure you use the primary series phrasing which Mudae uses.**
+        "
+preciseping:
+    aliases: ["preciseping", "pp", "addpreciseping", "perfectping", "specificping", "add_precise_ping", "add_perfect_ping", "app", "precisepingadd", "perfectpingadd", "specificpingadd", "ppa", "spa", "asp"]
+    message: "
+        __**MUSA02 Feature: Precise Ping**__ ₍₂₀₂₂₎
+        \n`!preciseping` or `!perfectping` or `!pp`
+        \nExample usage: `!pp Dark Souls`
+        \nThis feature is designed to be used in conjunction with the character roulette bot Mudae.
+        \nLike `!addping`, this adds a series title to be pinged for if Mudae rolls a character from that series. However, this only pings for perfect matches. This is basically an alternative to itacilizing titles with `!addping`. Also supports adding multiple titles at the same time by separating each title with $-symbols. Also see `!addping`, `!removeping`, `!clearpings`, `!pinglist`.
+        \n**Make sure you use the primary series phrasing which Mudae uses.**
+        "
+removeping:
+    aliases: ["removeping", "rp", "remove_ping", "pingremove", "ping_remove", "pr"]
+    message: "
+        __**MUSA02 Feature: Remove Ping**__ ₍₂₀₂₂₋₂₀₂₅₎
+        \n`!removeping` or `!rp`
+        \nExample usage: `!rp Homestuck`
+        \nThis feature is designed to be used in conjunction with the character roulette bot Mudae.
+        \nRemoves a specified title from the list of titles you should be pinged for if Mudae rolls a character from that series. Make sure to surround the title by asterisks if it is a precise ping title. Remove multiple titles at the same time by separating each title with $-symbols. Also see `!addping`, `!preciseping`, `!clearpings`, `!pinglist`.
+        "
+pinglist:
+    aliases: ["pinglist", "pl", "apl", "ping_list", "pingslist", "pings_list", "pings"]
+    message: "
+        __**MUSA02 Feature: Pinglist**__ ₍₂₀₂₂₎
+        \n`!pinglist` or `!pl`
+        \nExample usage: `!pl @Yoriyari`
+        \nThis feature is designed to be used in conjunction with the character roulette bot Mudae.
+        \nShows a user's list of series titles they wish to be pinged for when Mudae rolls a character from that series. If no user is specified by either mention or ID value, this shows your own pinglist. Also see `!addping`, `!preciseping`, `!removeping`, `!clearpings`.
+        "
+clearpings:
+    aliases: ["clear_pings", "clearping", "clear_ping", "pingclear", "ping_clear", "pingsclear", "pings_clear", "clearpinglist", "clear_pinglist", "clearpl", "clear_pl"]
+    message: "
+        __**MUSA02 Feature: Clear Pinglist**__ ₍₂₀₂₅₎
+        \n`!clearpings` or `!clearpl`
+        \nExample usage: `!clearpl`
+        \nThis feature is designed to be used in conjunction with the character roulette bot Mudae.
+        \nRemoves all entries from your pinglist. Also see `!addping`, `!preciseping`, `!removeping`, `!pinglist`.
+        "
+attendance:
+    aliases: ["attendance", "rollcall", "roll_call", "rolecall", "role_call"]
+    message: "
+        __**MUSA02 Feature: Attendance**__ ₍₂₀₂₂₎
+        \n`!attendance` or `!rollcall`
+        \nExample usage: `!attendance 5`
+        \nPosts a list with an amount of empty slots specified as number after the command. Users can tap a button underneath the list to be added to the list. Tap the button again to be removed from the list. The button is removed when the list is full.
+        "
+roles:
+    aliases: ["roles", "role", "roles_edit", "role_edit", "rolesedit", "roleedit", "edit_roles", "edit_role", "editroles", "editrole", "roles_add", "role_add", "rolesadd", "roleadd", "add_roles", "add_role", "addroles", "addrole"]
+    message: "
+        __**MUSA02 Feature: Roles**__ ₍₂₀₂₃₎
+        \n`!roles` or `!role`
+        \nExample usage: `!roles :cat: @Felines :dog: @Canines`
+        \nPosts a message which allows users to react to it in order to gain or remove a role from themselves. The format to set up this message requires you to post an emoji (custom emoji supported) followed by a mention of the role it should give upon reaction with that emoji. Optional text can be added after each emoji and as a preface. Reply to an existing role assignment message while invoking this command to overwrite the existing message.
+        \nUse `!editroles` to add new roles, edit established roles, or change the optional text. Much like creating a role assignment message, simply post an emoji followed by the role and optional text. If you're editing the text after an established role, you do not need to mention the role, as just its emoji is enough.
+        "
+shock:
+    aliases: ["shock", "shocker", "pishock", "zap"]
+    message: "
+        __**MUSA02 Feature: Shock**__ ₍₂₀₂₂₋₂₀₂₃₎
+        \n`!shock` or `!shocker` or `!pishock`
+        \nExample usage: `!shock intensity 25 duration 3`
+        \nMakes a connected PiShock device send out an electric shock. The intensity of the shock can be specified in a range from 1 to 100 and defaults to 25. The duration of the shock can be specified in a range from 0.1 to 15 seconds and defaults to 1. Also see `!vibrate`, `!beep`.
+        "
+vibrate:
+    aliases: ["vibrate", "vibe", "buzz"]
+    message: "
+        __**MUSA02 Feature: Vibrate**__ ₍₂₀₂₂₋₂₀₂₃₎
+        \n`!vibrate` or `!vibe`
+        \nExample usage: `!shock intensity 25 duration 3`
+        \nMakes a connected PiShock device vibrate. The intensity of the vibration can be specified in a range from 1 to 100 and defaults to 25. The duration of the vibration can be specified in a range from 0.1 to 15 seconds and defaults to 1. Also see `!shock`, `!beep`.
+        "
+beep:
+    aliases: ["beep", "sound"]
+    message: "
+        __**MUSA02 Feature: Beep**__ ₍₂₀₂₂₋₂₀₂₃₎
+        \n`!beep` or `!sound`
+        \nExample usage: `!beep duration 3`
+        \nMakes a connected PiShock device emit a beeping sound. The duration of the sound can be specified in a range from 0.1 to 15 seconds and defaults to 1. Also see `!shock`, `!vibrate`.
+        "
+clow:
+    aliases: ["clow"]
+    message: "
+        __**MUSA02 Feature: Clow**__ ₍₂₀₂₃₎
+        \n`!clow`
+        \nExample usage: `!clow 3`
+        \nA requested feature which generates random cards from Cardcaptor Sakura's clow deck. An amount may optionally be specified to draw multiple cards. Duplicate cards are avoided in the same draw, but may happen between different draws.
+        \n- `!clow draw [number]`: Draws an amount of clow cards.
+        \n- `!clow [number]`: Alias of `!clow draw [number]`.
+        "
+kill:
+    aliases: ["kill", "murder", "assassinate", "death", "die"]
+    message: "
+        __**MUSA02 Feature: Kill**__ ₍₂₀₂₃₎
+        \n`!kill` or `!murder` or `!death` or `!die`
+        \nExample usage: `!kill Elon Musk`
+        \nGenerates a random death for the specified target. If no target is specified, kills a random person.
+        "
+rockpaperscissors:
+    aliases: ["rockpaperscissors", "rps", "rock", "paper", "scissors", "rock_paper_scissors", "janken", "jankenpon", "jkp"]
+    message: "
+        __**MUSA02 Feature: Rock Paper Scissors**__ ₍₂₀₂₃₎
+        \n`!rockpaperscissors` or `!rps` or `!rock`
+        \nExample usage: `!rps @rohankishibe`
+        \nLets you play a game of rock paper scissors with anyone. If you @ someone after the command, the game will be between you and them. If you don't, anyone can join the game. You can play for as many rounds as you'd like.
+        "
+coinflip:
+    aliases: ["coinflip", "coin_flip", "coin", "flip"]
+    message: "
+        __**MUSA02 Feature: Coin Flip**__ ₍₂₀₂₃₎
+        \n`!coinflip` or `!coin` or `!flip`
+        \nExample usage: `!flip`
+        \nResponds with either heads or tails at random.
+        "
+loop:
+    aliases: ["loop", "repeat"]
+    message: "
+        __**MUSA02 Feature: Loop**__ ₍₂₀₂₃₎
+        \n`!loop` or `!repeat`
+        \nExample usage: `!loop`
+        \nAutomatically puts voice chat audio at the back of the play queue after it finishes playing.
+        "
+personalrole:
+    aliases: ["personalrole", "personal_role", "rolepersonal", "role_personal", "cosmeticrole", "cosmetic_role", "rolecosmetic", "role_cosmetic", "myrole", "my_role", "rolemy", "role_my", "setrole", "set_role", "sr", "roleset", "role_set", "rs"]
+    message: "
+        __**MUSA02 Feature: Personal Role**__ ₍₂₀₂₄₎
+        \n`!personalrole` or `!cosmeticrole` or `!setrole` or `!sr`
+        \nExample usage: `!setrole colour #AB8ED8`
+        \nAllows users to create and modify a personal role granting them a role colour and, if applicable, role icon. Only usable if whitelisted by a server admin.
+        \n**Role Modification**
+        \n- `!setrole name <name>`: Sets your personal role name. This will show up in your roles list as well as when somebody taps your role icon.
+        \n- `!setrole colour <colour>`: Sets your personal role colour. Accepts hexadecimal format, decimal format, `rgb(X,X,X)` format, various colour names, \"random\" and \"default\".
+        \n- `!setrole icon [emoji]`: Sets your personal role icon. Accepts either an emoji or an image attached to the command message.
+        \n- `!setrole delete`: Deletes your personal role from the server.
+        \n**Presets**
+        \n- `!setrole save <alias> [alias 2, ...]`: Creates a new role preset from your current personal role settings.
+        \n- `!setrole presets [user]`: List your saved presets. Optionally mention another user or user ID to list their presets.
+        \n- `!setrole preset <alias>`: Sets your personal role name, colour and icon to those previously saved to a preset.
+        \n- `!setrole <preset>`: Synonym for `!setrole preset <alias>`.
+        \n- `!setrole <preset> name <name>`: Changes a saved preset's role name.
+        \n- `!setrole <preset> colour <colour>`: Changes a saved preset's role colour.
+        \n- `!setrole <preset> icon [emoji]`: Changes a saved preset's role icon.
+        \n- `!setrole <preset> alias add <alias> [alias 2, ...]`: Adds other title(s) which can be used to invoke a role preset.
+        \n- `!setrole <preset> alias remove <alias> [alias 2, ...]`: Removes title(s) which can be used to invoke a role preset.
+        \n- `!setrole <preset> auto <off|partial|start|end|perfect>`: Automatically applies a preset depending on its aliases and your display name. Can be set to switch if your display name partially matches, starts with, ends with, or perfectly matches an alias.
+        \n- `!setrole <preset> delete`: Deletes a role preset.
+        \n**Administration**
+        \n- `!setrole whitelist`: Enables or disables use of this feature in the current server. For server admins only.
+        "
+eightball:
+    aliases: ["eightball", "8ball", "eight8all", "88all"]
+    message: "
+        __**MUSA02 Feature: 8 Ball**__ ₍₂₀₂₄₎
+        \n`!8ball` or `!eightball`
+        \nExample usage: `!8ball`
+        \nReturns a random answer from a magic 8 ball.
+        "
+minecraft:
+    aliases: ["minecraft", "mc"]
+    message: "
+        __**MUSA02 Feature: Minecraft**__ ₍₂₀₂₀₋₂₀₂₁₎
+        \n`!minecraft` or `!mc`
+        \nExample usage: `!mc`
+        \nA legacy command from my early days. Back in April 2020, I would be booted with the rest of Yoriyari's laptop in the morning and shut down with it at night. Yoriyari hooked up a command to let any friend launch Yoriyari's Minecraft server through Discord whenever they wanted to play. However, in August 2021, I was moved to a standalone Raspberry Pi such that I could be online 24/7. This hardware could not handle running a Minecraft server as well, so this command was altered to simply give Yoriyari a notification to launch the Minecraft server manually.
+        "
+steveo:
+    aliases: ["steveo", "steve-o"]
+    message: "
+        __**MUSA02 Feature: Steve-O**__ ₍₂₀₂₂₎
+        \n`!steveo` or `!steve-o`
+        \nExample usage: `!steveo`
+        \nA requested feature which sends a random picture of some guy named Steve-O.
+        "
+classes:
+    aliases: ["classes", "class"]
+    message: "
+        __**MUSA02 Feature: D&D Classes**__ ₍₂₀₂₂₎
+        \n`!classes` or `!class`
+        \nExample usage: `!class Bard`
+        \nLets you browse the descriptions of the player classes from Dungeons & Dragons 5th Edition.
+        \nSpecify a class's name to display its description or specify none to browse all classes.
+        "
+spells:
+    aliases: ["spells", "spell"]
+    message: "
+        __**MUSA02 Feature: D&D Spells**__ ₍₂₀₂₂₎
+        \n`!spells` or `!spell`
+        \nExample usage: `!spell Prismatic Wall`
+        \nLets you browse all spells from Dungeons & Dragons 5th Edition.
+        \nSpecify a spell's name to display its description or specify none to browse all spells.
+        "
+cast:
+    aliases: ["cast"]
+    message: "
+        __**MUSA02 Feature: D&D Casting**__ ₍₂₀₂₂₎
+        \n`!cast`
+        \nExample usage: `!cast Acid Splash`
+        \nAn unfinished feature which gives a short description of a spell from Dungeons & Dragons 5th Edition and automatically performs associated dice rolls.
+        "
+items:
+    aliases: ["items", "item"]
+    message: "
+        __**MUSA02 Feature: D&D Items**__ ₍₂₀₂₂₎
+        \n`!items` or `!item`
+        \nExample usage: `!item Book`
+        \nLets you browse the descriptions of most items from the Player's Handbook of Dungeons & Dragons 5th Edition.
+        \nSpecify an item's name to display its description or specify none to browse all items.
+        "
+dnd:
+    aliases: ["dnd", "d&d"]
+    message: "
+        __**MUSA02 Feature: D&D**__ ₍₂₀₂₂₎
+        \n`!dnd` or `!d&d`
+        \nExample usage: `!dnd`
+        \nOpens a browser for classes, items and spells from Dungeons & Dragons 5th Edition.
+        "
+domt:
+    aliases: ["domt", "dommt", "dmt", "dmmt", "deckofmanythings", "deckofmany", "manythings"]
+    message: "
+        __**MUSA02 Feature: Deck of Many Things**__ ₍₂₀₂₄₎
+        \n`!domt`
+        \nExample usage: `!domt 3`
+        \nDraws cards from the Deck of Many Things from Dungeons & Dragons 5th Edition. Optionally specify a number of cards to draw after the command.
+        \n- `!domt [number]`: Draws an amount of cards from the Deck of Many More Things (2024) including sixty-six cards.
+        \n- `!domt large [number]`: Alias of `!domt`.
+        \n- `!domt medium [number]`: Draws an amount of cards from the original Deck of Many Things (2014) including twenty-two cards.
+        \n- `!domt small [number]`: Draws an amount of cards from the reduced Deck of Many Things (2014) including thirteen cards.
+        "
+notes:
+    aliases: ["notes", "note", "notepad"]
+    message: "
+        __**MUSA02 Feature: Notes**__ ₍₂₀₂₄₎
+        \n`!notes` or `!note`
+        \nExample usage: `!note ToDo List`
+        \nA notepad for users to save some text under a title to easily pull up again in the future. Users can browse their existing notes, display one, and create, edit, or delete notes. Each note supports up to 4000 characters and each user can save up to 25 notes.
+        \n- `!note [title]`: By default, shows a dropdown list of the user's saved notes. If an existing note's title is provided, this instead displays that note.
+        "
+rearrange:
+    aliases: ["rearrange", "reorder"]
+    message: "
+        __**MUSA02 Feature: Rearrange**__ ₍₂₀₂₄₎
+        \n``!rearrange` or `!reorder`
+        \nExample usage: `!rearrange Alice's turn, Bob's turn, Carol's turn, Dave's turn`
+        \nShuffles the options supplied after the command itself. Options are separated by commas. If there are no commas, they are separated by spaces. If there are no spaces either, this just shuffles characters.
+        "
+familyshare:
+    aliases: ["familyshare", "family_share", "steam", "steamgame", "steam_game", "steamgames", "steam_games", "suggestgame", "suggest_game", "randomgame", "random_game", "game", "gaming", "games"]
+    message: "
+        __**MUSA02 Feature: Family-Shared Steam Games**__ ₍₂₀₂₄₋₂₀₂₅₎
+        \n`!familyshare` or `!steam` or `!randomgame` or `!game`
+        \nExample usage: `!game link Yoriyari`
+        \nSuggests a random game from your Steam library. You need to go through a one-time setup to tell me what your Steam library is and, if applicable, who you've set up Steam family-sharing with. Each Steam library should be publicly visible for this. Received suggestions can optionally be removed from your suggestions pool or skipped for later. You can check what percentage of games has been removed from the pool.
+        \n### Game suggestions
+        \n- `!steam`: Suggests a game.
+        \n- `!steam percentage`: Displays the percentage of games which have been set to \"Don't Suggest Again\".
+        \n- `!steam hidden`: Lists all game titles which have been set to \"Don't Suggest Again\".
+        \n- `!steam hide <title>`: Sets a game title to \"Don't Suggest Again\" without needing to roll it.
+        \n- `!steam unhide <title>`: Reverts the specified game title from being set to \"Don't Suggest Again\", thus allowing it to be suggested again.
+        \n- `!steam unhideall`: Reverts all game titles from being set to \"Don't Suggest Again\".
+        \n### Steam library
+        \n- `!steam link <steam_account>`: Sets which Steam account belongs to you. Provide either a Steam profile URL or a Steam ID.
+        \n- `!steam unlink`: Removes the link to your Steam account and any registered family.
+        \n- `!steam sync`: Updates which games are in all user libraries.
+        \n- `!steam library`: Lists all game titles in your library.
+        \n- `!steam search <query>`: Lists all your games which partially match the query.
+        \n### Steam families
+        \n- `!steam share <user>`: Registers a Steam family with someone. This adds their family-shareable games to your available suggestions and vice versa. You can provide a Steam profile URL or Steam ID, or a Discord mention or Discord ID if the Discord user has linked their Steam account.
+        \n- `!steam unshare <user>`: Removes a user from your registered family. Like above, You can provide either a Steam or Discord user.
+        \n- `!steam family`: Lists which users are registered as your family.
+        \n- `!steam leave`: Removes you from your registered family.
+        "
+chaosping:
+    aliases: ["chaos_ping", "chaospings", "chaos_pings", "keyping", "key_ping", "keypings", "key_pings", "togglechaos", "togglekey", "togglekeys", "toggle_chaos", "toggle_key", "toggle_keys", "chaostoggle", "keytoggle", "keystoggle", "chaos_toggle", "key_toggle", "keys_toggle", "togglechaospings", "toggle_chaos_pings", "togglechaosping", "toggle_chaos_ping", "chaospingtoggle", "chaospingstoggle", "chaos_ping_toggle", "chaos_pings_toggle", "togglekeypings", "toggle_key_pings", "togglekeyping", "toggle_key_ping", "keypingtoggle", "keypingstoggle", "key_ping_toggle", "key_pings_toggle", "togglereact", "togglereacts", "toggle_react", "toggle_reacts", "reacttoggle", "reactstoggle", "react_toggle", "reacts_toggle"]
+    message: "
+        __**MUSA02 Feature: Chaos Pings**__ ₍₂₀₂₅₎
+        \n`!togglechaos` or `!chaospings`
+        \nExample usage: `!togglechaos`
+        \nThis feature is designed to be used in conjunction with the character roulette bot Mudae.
+        \nIf you opt in, you will be pinged every time a character which you can react to at half kakera cost is rolled. To ping for all characters in a series, see `!addping`.
+        "

@@ -1,0 +1,1307 @@
+{
+    "standard": [
+        "Artificer",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Sorcerer",
+        "Warlock",
+        "Wizard"
+    ],
+    "homebrew": {
+    },
+    "classes": {
+        "Artificer": {
+            "name": "Artificer",
+            "description": "Masters of invention, artificers use ingenuinity and magic to unlock extraordinary capabilities in objects.",
+            "hit_die": 8,
+            "proficiencies": {
+                "saving_throws": ["Constitution", "Intelligence"],
+                "skills": [
+                    {
+                        "choose": 2,
+                        "from": [
+                            "Arcana",
+                            "History",
+                            "Investigation",
+                            "Medicine",
+                            "Nature",
+                            "Perception",
+                            "Sleight of Hand"
+                        ]
+                    }
+                ],
+                "armor": ["Light Armor", "Medium Armor", "Shield"],
+                "weapons": ["Simple Weapon"],
+                "tools": [
+                    "Thieves' Tools",
+                    "Tinker's Tools",
+                    {
+                        "choose": 1,
+                        "from": ["Artisan's Tools"]
+                    }
+                ]
+            },
+            "features": {
+                "1": ["Magical Tinkering", "Spellcasting"],
+                "2": ["Infuse Item"],
+                "3": ["Artificer Specialist", "The Right Tool for the Job"],
+                "4": ["Ability Score Improvement"],
+                "5": ["Artificer Specialist Feature"],
+                "6": ["Tool Expertise"],
+                "7": ["Flash of Genius"],
+                "8": ["Ability Score Improvement"],
+                "9": ["Artificer Specialist Feature"],
+                "10": ["Magic Item Adept"],
+                "11": ["Spell-Storing Item"],
+                "12": ["Ability Score Improvement"],
+                "13": [],
+                "14": ["Magic Item Savant"],
+                "15": ["Artificer Specialist Feature"],
+                "16": ["Ability Score Improvement"],
+                "17": [],
+                "18": ["Magic Item Master"],
+                "19": ["Ability Score Improvement"],
+                "20": ["Soul of Artifice"]
+            },
+            "starting_equipment": [
+                {
+                    "choose": 2,
+                    "from": ["Simple Weapon"]
+                },
+                [
+                    "Light Crossbow",
+                    {
+                        "quantity": 20,
+                        "item": "Crossbow Bolt"
+                    }
+                ],
+                {
+                    "choose": 1,
+                    "from": ["Studded Leather Armor", "Scale Mail"]
+                },
+                ["Thieves' Tools", "Dungeoneer's Pack"]
+            ],
+            "starting_gold": {
+                "dice": 5,
+                "faces": 4,
+                "multiplier": 10
+            },
+            "multiclass": {
+                "requirement": {
+                    "abilities": ["Intelligence"]
+                },
+                "proficiencies": {
+                    "armor": ["Light Armor", "Medium Armor", "Shield"],
+                    "tools": ["Thieves' Tools", "Tinker's Tools"]
+                }
+            }
+        },
+        "Barbarian": {
+            "name": "Barbarian",
+            "description": "A fierce warrior of primitive background who can enter a battle rage.",
+            "hit_die": 12,
+            "proficiencies": {
+                "saving_throws": ["Strength", "Constitution"],
+                "skills": [
+                    {
+                        "choose": 2,
+                        "from": [
+                            "Animal Handling",
+                            "Athletics",
+                            "Intimidation",
+                            "Nature",
+                            "Perception",
+                            "Survival"
+                        ]
+                    }
+                ],
+                "armor": ["Light Armor", "Medium Armor", "Shield"],
+                "weapons": ["Simple Weapon", "Martial Weapon"]
+            },
+            "features": {
+                "1": ["Rage", "Unarmored Defense"],
+                "2": ["Danger Sense", "Reckless Attack"],
+                "3": ["Primal Path", "Primal Knowledge"],
+                "4": ["Ability Score Improvement"],
+                "5": ["Extra Attack", "Fast Movement"],
+                "6": ["Path Feature"],
+                "7": ["Feral Instinct", "Instinctive Pounce"],
+                "8": ["Ability Score Improvement"],
+                "9": ["Brutal Critical (1 die)"],
+                "10": ["Path Feature"],
+                "11": ["Relentless Rage"],
+                "12": ["Ability Score Improvement"],
+                "13": ["Brutal Critical (2 dice)"],
+                "14": ["Path Feature"],
+                "15": ["Persistent Rage"],
+                "16": ["Ability Score Improvement"],
+                "17": ["Brutal Critical (3 dice)"],
+                "18": ["Indomitable Might"],
+                "19": ["Ability Score Improvement"],
+                "20": ["Primal Champion"]
+            },
+            "starting_equipment": [
+                {
+                    "choose": 1,
+                    "from": [
+                        "Greataxe",
+                        {
+                            "choose": 1,
+                            "from": [
+                                {
+                                    "item": "Martial Weapon",
+                                    "restriction": "melee"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": [
+                        {
+                            "quantity": 2,
+                            "item": "Handaxe"
+                        },
+                        {
+                            "choose": 1,
+                            "from": ["Simple Weapon"]
+                        }
+                    ]
+                },
+                [
+                    "Explorer's Pack",
+                    {
+                        "quantity": 4,
+                        "item": "Javelin"
+                    }
+                ]
+            ],
+            "starting_gold": {
+                "dice": 2,
+                "faces": 4,
+                "multiplier": 10
+            },
+            "multiclass": {
+                "requirement": {
+                    "abilities": ["Strength"]
+                },
+                "proficiencies": {
+                    "armor": ["Shield"],
+                    "weapons": ["Simple Weapon", "Martial Weapon"]
+                }
+            }
+        },
+        "Bard": {
+            "name": "Bard",
+            "description": "An inspiring musician whose power echoes the music of creation.",
+            "hit_die": 8,
+            "proficiencies": {
+                "saving_throws": ["Dexterity", "Charisma"],
+                "skills": [
+                    {
+                        "choose": 3,
+                        "from": [
+                            "any"
+                        ]
+                    }
+                ],
+                "armor": ["Light Armor"],
+                "weapons": [
+                    "Simple Weapon",
+                    "Hand Crossbow",
+                    "Longsword",
+                    "Rapier",
+                    "Shortsword"
+                ],
+                "tools": [
+                    {
+                        "choose": 3,
+                        "from": ["Musical Instrument"]
+                    }
+                ]
+            },
+            "features": {
+                "1": ["Bardic Inspiration", "Spellcasting"],
+                "2": ["Jack of All Trades", "Song of Rest (d6)", "Magical Inspiration"],
+                "3": ["Bard College", "Expertise"],
+                "4": ["Ability Score Improvement", "Bardic Versatility"],
+                "5": ["Bardic Inspiration (d8)", "Font of Inspiration"],
+                "6": ["Countercharm", "Bard College Feature"],
+                "7": [],
+                "8": ["Ability Score Improvement"],
+                "9": ["Song of Rest (d8)"],
+                "10": ["Bardic Inspiration (d10)", "Expertise", "Magical Secrets"],
+                "11": [],
+                "12": ["Ability Score Improvement"],
+                "13": ["Song of Rest (d10)"],
+                "14": ["Magical Secrets", "Bard College Feature"],
+                "15": ["Bardic Inspiration (d12)"],
+                "16": ["Ability Score Improvement"],
+                "17": ["Song of Rest (d12)"],
+                "18": ["Magical Secrets"],
+                "19": ["Ability Score Improvement"],
+                "20": ["Superior Inspiration"]
+            },
+            "starting_equipment": [
+                {
+                    "choose": 1,
+                    "from": [
+                        "Rapier",
+                        "Longsword",
+                        {
+                            "choose": 1,
+                            "from": ["Simple Weapon"]
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Diplomat's Pack", "Entertainer's Pack"]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Lute", "Musical Instrument"]
+                },
+                ["Leather Armor", "Dagger"]
+            ],
+            "starting_gold": {
+                "dice": 5,
+                "faces": 4,
+                "multiplier": 10
+            },
+            "multiclass": {
+                "requirement": {
+                    "abilities": ["Charisma"]
+                },
+                "proficiencies": {
+                    "skills": [
+                        {
+                            "choose": 1,
+                            "from": [
+                                "any"
+                            ]
+                        }
+                    ],
+                    "armor": ["Light Armor"],
+                    "tools": [
+                        {
+                            "choose": 1,
+                            "from": ["Musical Instrument"]
+                        }
+                    ]
+                }
+            }
+        },
+        "Cleric": {
+            "name": "Cleric",
+            "description": "A priestly champion who wields divine magic in service of a higher power.",
+            "hit_die": 8,
+            "proficiencies": {
+                "saving_throws": ["Wisdom", "Charisma"],
+                "skills": [
+                    {
+                        "choose": 2,
+                        "from": [
+                            "History",
+                            "Insight",
+                            "Medicine",
+                            "Persuasion",
+                            "Religion"
+                        ]
+                    }
+                ],
+                "armor": ["Light Armor", "Medium Armor", "Shield"],
+                "weapons": ["Simple Weapon"]
+            },
+            "features": {
+                "1": ["Spellcasting", "Divine Domain"],
+                "2": ["Channel Divinity (1/rest)", "Divine Domain Feature"],
+                "3": [],
+                "4": ["Ability Score Improvement", "Cantrip Versatility"],
+                "5": ["Destroy Undead (CR 1/2)"],
+                "6": ["Channel Divinity (2/rest)", "Divine Domain Feature"],
+                "7": [],
+                "8": ["Ability Score Improvement", "Destroy Undead (CR 1)", "Divine Domain Feature"],
+                "9": [],
+                "10": ["Divine Intervention"],
+                "11": ["Destroy Undead (CR 2)"],
+                "12": ["Ability Score Improvement"],
+                "13": [],
+                "14": ["Destroy Undead (CR 3)"],
+                "15": [],
+                "16": ["Ability Score Improvement"],
+                "17": ["Destroy Undead (CR 4)", "Divine Domain Feature"],
+                "18": ["Channel Divinity (3/rest)"],
+                "19": ["Ability Score Improvement"],
+                "20": ["Divine Intervention Improvement"]
+            },
+            "starting_equipment": [
+                {
+                    "choose": 1,
+                    "from": [
+                        "Mace",
+                        {
+                            "item": "Warhammer",
+                            "restriction": "if proficient"
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": [
+                        "Scale Mail",
+                        "Leather Armor",
+                        {
+                            "item": "Chain Mail",
+                            "restriction": "if proficient"
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": [
+                        [
+                            "Light Crossbow",
+                            {
+                                "quantity": 20,
+                                "item": "Crossbow Bolt"
+                            }
+                        ],
+                        {
+                            "choose": 1,
+                            "from": ["Simple Weapon"]
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Priest's Pack", "Explorer's Pack"]
+                },
+                ["Shield", "Holy Symbol"]
+            ],
+            "starting_gold": {
+                "dice": 5,
+                "faces": 4,
+                "multiplier": 10
+            },
+            "multiclass": {
+                "requirement": {
+                    "abilities": ["Wisdom"]
+                },
+                "proficiencies": {
+                    "armor": ["Light Armor", "Medium Armor", "Shield"]
+                }
+            }
+        },
+        "Druid": {
+            "name": "Druid",
+            "description": "A priest of the Old Faith, wielding the powers of nature and adopting animal forms.",
+            "hit_die": 8,
+            "proficiencies": {
+                "saving_throws": ["Intelligence", "Wisdom"],
+                "skills": [
+                    {
+                        "choose": 2,
+                        "from": [
+                            "Arcana",
+                            "Animal Handling",
+                            "Insight",
+                            "Medicine",
+                            "Nature",
+                            "Perception",
+                            "Religion",
+                            "Survival"
+                        ]
+                    }
+                ],
+                "armor": [
+                    {
+                        "item": ["Light Armor", "Medium Armor", "Shield"],
+                        "restriction": "druids will not wear armor or use shields made of metal"
+                    }
+                ],
+                "weapons": [
+                    "Club",
+                    "Dagger",
+                    "Dart",
+                    "Javelin",
+                    "Mace",
+                    "Quarterstaff",
+                    "Scimitar",
+                    "Sickle",
+                    "Sling",
+                    "Spear"
+                ],
+                "tools": ["Herbalism Kit"]
+            },
+            "features": {
+                "1": ["Druidic", "Spellcasting"],
+                "2": ["Wild Shape", "Druid Circle"],
+                "3": [],
+                "4": ["Wild Shape Improvement", "Ability Score Improvement"],
+                "5": [],
+                "6": ["Druid Circle Feature"],
+                "7": [],
+                "8": ["Wild Shape Improvement", "Ability Score Improvement"],
+                "9": [],
+                "10": ["Druid Circle Feature"],
+                "11": [],
+                "12": ["Ability Score Improvement"],
+                "13": [],
+                "14": ["Druid Circle Feature"],
+                "15": [],
+                "16": ["Ability Score Improvement"],
+                "17": [],
+                "18": ["Timeless Body", "Beast Spells"],
+                "19": ["Ability Score Improvement"],
+                "20": ["Archdruid"]
+            },
+            "starting_equipment": [
+                {
+                    "choose": 1,
+                    "from": [
+                        {
+                            "item": "Shield",
+                            "restriction": "wooden"
+                        },
+                        {
+                            "choose": 1,
+                            "from": ["Simple Weapon"]
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": [
+                        "Scimitar",
+                        {
+                            "choose": 1,
+                            "from": [
+                                {
+                                    "item": "Simple Weapon",
+                                    "restriction": "melee"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                ["Leather Armor", "Explorer's Pack", "Druidic Focus"]
+            ],
+            "starting_gold": {
+                "dice": 2,
+                "faces": 4,
+                "multiplier": 10
+            },
+            "multiclass": {
+                "requirement": {
+                    "abilities": ["Wisdom"]
+                },
+                "proficiencies": {
+                    "armor": [
+                        {
+                            "item": ["Light Armor", "Medium Armor", "Shield"],
+                            "restriction": "druids will not wear armor or use shields made of metal"
+                        }
+                    ]
+                }
+            }
+        },
+        "Fighter": {
+            "name": "Fighter",
+            "description": "A master of martial combat, skilled with a variety of weapons and armor.",
+            "hit_die": 10,
+            "proficiencies": {
+                "saving_throws": ["Strength", "Constitution"],
+                "skills": [
+                    {
+                        "choose": 2,
+                        "from": [
+                            "Acrobatics",
+                            "Animal Handling",
+                            "Athletics",
+                            "History",
+                            "Insight",
+                            "Intimidation",
+                            "Perception",
+                            "Survival"
+                        ]
+                    }
+                ],
+                "armor": ["Light Armor", "Medium Armor", "Heavy Armor", "Shield"],
+                "weapons": ["Simple Weapon", "Martial Weapon"]
+            },
+            "features": {
+                "1": ["Fighting Style", "Second Wind"],
+                "2": ["Action Surge (1 use)"],
+                "3": ["Martial Archetype"],
+                "4": ["Ability Score Improvement"],
+                "5": ["Extra Attack"],
+                "6": ["Ability Score Improvement"],
+                "7": ["Martial Archetype Feature"],
+                "8": ["Ability Score Improvement"],
+                "9": ["Indomitable (1 use)"],
+                "10": ["Martial Archetype Feature"],
+                "11": ["Extra Attack (2)"],
+                "12": ["Ability Score Improvement"],
+                "13": ["Indomitable (2 uses)"],
+                "14": ["Ability Score Improvement"],
+                "15": ["Martial Archetype Feature"],
+                "16": ["Ability Score Improvement"],
+                "17": ["Action Surge (2 uses)", "Indomitable (3 uses)"],
+                "18": ["Martial Archetype Feature"],
+                "19": ["Ability Score Improvement"],
+                "20": ["Extra Attack (3)"]
+            },
+            "starting_equipment": [
+                {
+                    "choose": 1,
+                    "from": [
+                        "Chain Mail",
+                        [
+                            "Leather Armor",
+                            "Longbow",
+                            {
+                                "quantity": 20,
+                                "item": "Arrow"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": [
+                        [
+                            {
+                                "choose": 1,
+                                "from": ["Martial Weapon"]
+                            },
+                            "Shield"
+                        ],
+                        {
+                            "choose": 2,
+                            "from": ["Martial Weapon"]
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": [
+                        [
+                            "Light Crossbow",
+                            {
+                                "quantity": 20,
+                                "item": "Crossbow Bolt"
+                            }
+                        ],
+                        {
+                            "quantity": 2,
+                            "item": "Handaxe"
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Dungeoneer's Pack", "Explorer's Pack"]
+                }
+            ],
+            "starting_gold": {
+                "dice": 5,
+                "faces": 4,
+                "multiplier": 10
+            },
+            "multiclass": {
+                "requirement": {
+                    "conjunction": "or",
+                    "abilities": ["Strength", "Dexterity"]
+                },
+                "proficiencies": {
+                    "armor": ["Light Armor", "Medium Armor", "Shield"],
+                    "weapons": ["Simple Weapon", "Martial Weapon"]
+                }
+            }
+        },
+        "Monk": {
+            "name": "Monk",
+            "description": "A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection.",
+            "hit_die": 8,
+            "proficiencies": {
+                "saving_throws": ["Strength", "Dexterity"],
+                "skills": [
+                    {
+                        "choose": 2,
+                        "from": [
+                            "Acrobatics",
+                            "Athletics",
+                            "History",
+                            "Insight",
+                            "Religion",
+                            "Stealth"
+                        ]
+                    }
+                ],
+                "weapons": ["Simple Weapons", "Shortsword"],
+                "tools": [
+                    {
+                        "choose": 1,
+                        "from": ["Artisan's Tools", "Musical Instrument"]
+                    }
+                ]
+            },
+            "features": {
+                "1": ["Unarmored Defense", "Martial Arts"],
+                "2": ["Ki", "Unarmored Movement"],
+                "3": ["Deflect Missiles", "Monastic Tradition"],
+                "4": ["Ability Score Improvement", "Slow Fall"],
+                "5": ["Extra Attack", "Stunning Strike"],
+                "6": ["Ki-Empowered Strikes", "Monastic Tradition Features"],
+                "7": ["Evasion", "Stillness of Mind"],
+                "8": ["Ability Score Improvement"],
+                "9": ["Unarmored Movement Improvement"],
+                "10": ["Purity of Body"],
+                "11": ["Monastic Tradition Feature"],
+                "12": ["Ability Score Improvement"],
+                "13": ["Tongue of the Sun and Moon"],
+                "14": ["Diamond Soul"],
+                "15": ["Timeless Body"],
+                "16": ["Ability Score Improvement"],
+                "17": ["Monastic Tradition Feature"],
+                "18": ["Empty Body"],
+                "19": ["Ability Score Improvement"],
+                "20": ["Perfect Self"]
+            },
+            "starting_equipment": [
+                {
+                    "choose": 1,
+                    "from": [
+                        "Shortsword",
+                        {
+                            "choose": 1,
+                            "from": ["Simple Weapon"]
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Dungeoneer's Pack", "Explorer's Pack"]
+                },
+                {
+                    "quantity": 10,
+                    "item": "Dart"
+                }
+            ],
+            "starting_gold": {
+                "dice": 5,
+                "faces": 4
+            },
+            "multiclass": {
+                "requirement": {
+                    "conjunction": "and",
+                    "abilities": ["Dexterity", "Wisdom"]
+                },
+                "proficiencies": {
+                    "weapons": ["Simple Weapon", "Shortsword"]
+                }
+            }
+        },
+        "Paladin": {
+            "name": "Paladin",
+            "description": "A holy warrior bound to a sacred oath.",
+            "hit_die": 10,
+            "proficiencies": {
+                "saving_throws": ["Wisdom", "Charisma"],
+                "skills": [
+                    {
+                        "choose": 2,
+                        "from": [
+                            "Athletics",
+                            "Insight",
+                            "Intimidation",
+                            "Medicine",
+                            "Persuasion",
+                            "Religion"
+                        ]
+                    }
+                ],
+                "armor": ["Light Armor", "Medium Armor", "Heavy Armor", "Shield"],
+                "weapons": ["Simple Weapon", "Martial Weapon"]
+            },
+            "features": {
+                "1": ["Divine Sense", "Lay on Hands"],
+                "2": ["Divine Smite", "Fighting Style", "Spellcasting"],
+                "3": ["Divine Health", "Sacred Oath"],
+                "4": ["Ability Score Improvement"],
+                "5": ["Extra Attack"],
+                "6": ["Aura of Protection"],
+                "7": ["Sacred Oath Feature"],
+                "8": ["Ability Score Improvement"],
+                "9": [],
+                "10": ["Aura of Courage"],
+                "11": ["Improved Divine Smite"],
+                "12": ["Ability Score Improvement"],
+                "13": [],
+                "14": ["Cleansing Touch"],
+                "15": ["Sacred Oath Feature"],
+                "16": ["Ability Score Improvement"],
+                "17": [],
+                "18": ["Aura Improvements"],
+                "19": ["Ability Score Improvement"],
+                "20": ["Sacred Oath Feature"]
+            },
+            "starting_equipment": [
+                {
+                    "choose": 1,
+                    "from": [
+                        [
+                            {
+                                "choose": 1,
+                                "from": ["Martial Weapon"]
+                            },
+                            "Shield"
+                        ],
+                        {
+                            "choose": 2,
+                            "from": ["Martial Weapon"]
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": [
+                        {
+                            "quantity": 5,
+                            "item": "Javelin"
+                        },
+                        {
+                            "choose": 1,
+                            "from": [
+                                {
+                                    "item": "Simple Weapon",
+                                    "restriction": "melee"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Priest's Pack", "Explorer's Pack"]
+                },
+                ["Chain Mail", "Holy Symbol"]
+            ],
+            "starting_gold": {
+                "dice": 5,
+                "faces": 4,
+                "multiplier": 10
+            },
+            "multiclass": {
+                "requirement": {
+                    "conjunction": "and",
+                    "abilities": ["Strength", "Charisma"]
+                },
+                "proficiencies": {
+                    "armor": ["Light Armor", "Medium Armor", "Shield"],
+                    "weapons": ["Simple Weapon", "Martial Weapon"]
+                }
+            }
+        },
+        "Ranger": {
+            "name": "Ranger",
+            "description": "A warrior who combats threats on the edges of civilization.",
+            "hit_die": 10,
+            "proficiencies": {
+                "saving_throws": ["Strength", "Dexterity"],
+                "skills": [
+                    {
+                        "choose": 3,
+                        "from": [
+                            "Animal Handling",
+                            "Athletics",
+                            "Insight",
+                            "Investigation",
+                            "Nature",
+                            "Perception",
+                            "Stealth",
+                            "Survival"
+                        ]
+                    }
+                ],
+                "armor": ["Light Armor", "Medium Armor", "Shield"],
+                "weapons": ["Simple Weapon", "Martial Weapon"]
+            },
+            "features": {
+                "1": ["Favored Enemy", "Natural Explorer"],
+                "2": ["Fighting Style", "Spellcasting"],
+                "3": ["Ranger Archetype", "Primeval Awareness"],
+                "4": ["Ability Score Improvement"],
+                "5": ["Extra Attack"],
+                "6": ["Favored Enemy and Natural Explorer Improvements"],
+                "7": ["Ranger Archetype Feature"],
+                "8": ["Ability Score Improvement", "Land's Stride"],
+                "9": [],
+                "10": ["Hide in Plain Sight", "Natural Explorer Improvement"],
+                "11": ["Ranger Archetype Feature"],
+                "12": ["Ability Score Improvement"],
+                "13": [],
+                "14": ["Vanish", "Favored Enemy Improvement"],
+                "15": ["Ranger Archetype Feature"],
+                "16": ["Ability Score Improvement"],
+                "17": [],
+                "18": ["Feral Senses"],
+                "19": ["Ability Score Improvement"],
+                "20": ["Foe Slayer"]
+            },
+            "starting_equipment": [
+                {
+                    "choose": 1,
+                    "from": ["Scale Mail", "Leather Armor"]
+                },
+                {
+                    "choose": 1,
+                    "from": [
+                        {
+                            "quantity": 2,
+                            "item": "Shortsword"
+                        },
+                        {
+                            "choose": 2,
+                            "from": ["Simple Weapon"]
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Dungeoneer's Pack", "Explorer's Pack"]
+                },
+                [
+                    "Longbow",
+                    "Quiver",
+                    {
+                        "quantity": 20,
+                        "item": "Arrow"
+                    }
+                ]
+            ],
+            "starting_gold": {
+                "dice": 5,
+                "faces": 4,
+                "multiplier": 10
+            },
+            "multiclass": {
+                "requirement": {
+                    "conjunction": "and",
+                    "abilities": ["Dexterity", "Wisdom"]
+                },
+                "proficiencies": {
+                    "skills": [
+                        {
+                            "choose": 1,
+                            "from": [
+                                "Animal Handling",
+                                "Athletics",
+                                "Insight",
+                                "Investigation",
+                                "Nature",
+                                "Perception",
+                                "Stealth",
+                                "Survival"
+                            ]
+                        }
+                    ],
+                    "armor": ["Light Armor", "Medium Armor", "Shield"],
+                    "weapons": ["Simple Weapon", "Martial Weapon"]
+                }
+            }
+        },
+        "Rogue": {
+            "name": "Rogue",
+            "description": "A scoundrel who uses stealth and trickery to overcome obstacles and enemies.",
+            "hit_die": 8,
+            "proficiencies": {
+                "saving_throws": ["Dexterity", "Intelligence"],
+                "skills": [
+                    {
+                        "choose": 4,
+                        "from": [
+                            "Acrobatics",
+                            "Athletics",
+                            "Deception",
+                            "Insight",
+                            "Intimidation",
+                            "Investigation",
+                            "Perception",
+                            "Performance",
+                            "Persuasion",
+                            "Sleight of Hand",
+                            "Stealth"
+                        ]
+                    }
+                ],
+                "armor": ["Light Armor"],
+                "weapons": [
+                    "Simple Weapon",
+                    "Hand Crossbow",
+                    "Longsword",
+                    "Rapier",
+                    "Shortsword"
+                ],
+                "tools": ["Thieves' Tools"]
+            },
+            "features": {
+                "1": ["Expertise", "Sneak Attack", "Thieves' Cant"],
+                "2": ["Cunning Action"],
+                "3": ["Roguish Archetype"],
+                "4": ["Ability Score Improvement"],
+                "5": ["Uncanny Dodge"],
+                "6": ["Expertise"],
+                "7": ["Evasion"],
+                "8": ["Ability Score Improvement"],
+                "9": ["Roguish Archetype Feature"],
+                "10": ["Ability Score Improvement"],
+                "11": ["Reliable Ralent"],
+                "12": ["Ability Score Improvement"],
+                "13": ["Roguish Archetype Feature"],
+                "14": ["Blindsense"],
+                "15": ["Slippery Mind"],
+                "16": ["Ability Score Improvement"],
+                "17": ["Roguish Archetype Feature"],
+                "18": ["Elusive"],
+                "19": ["Ability Score Improvement"],
+                "20": ["Stroke of Luck"]
+            },
+            "starting_equipment": [
+                {
+                    "choose": 1,
+                    "from": ["Rapier", "Shortsword"]
+                },
+                {
+                    "choose": 1,
+                    "from": [
+                        [
+                            "Shortbow",
+                            "Quiver",
+                            {
+                                "quantity": 20,
+                                "item": "Arrow"
+                            }
+                        ],
+                        "Shortsword"
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Burglar's Pack", "Dungeoneer's Pack", "Explorer's Pack"]
+                },
+                [
+                    "Leather Armor",
+                    {
+                        "quantity": 2,
+                        "item": "Dagger"
+                    },
+                    "Thieves' Tools"
+                ]
+            ],
+            "starting_gold": {
+                "dice": 4,
+                "faces": 4,
+                "multiplier": 10
+            },
+            "multiclass": {
+                "requirement": {
+                    "abilities": ["Dexterity"]
+                },
+                "proficiencies": {
+                    "skills": [
+                        {
+                            "choose": 1,
+                            "from": [
+                                "Acrobatics",
+                                "Athletics",
+                                "Deception",
+                                "Insight",
+                                "Intimidation",
+                                "Investigation",
+                                "Perception",
+                                "Performance",
+                                "Persuasion",
+                                "Sleight of Hand",
+                                "Stealth"
+                            ]
+                        }
+                    ],
+                    "armor": ["Light Armor"],
+                    "tools": ["Thieves' Tools"]
+                }
+            }
+        },
+        "Sorcerer": {
+            "name": "Sorcerer",
+            "description": "A spellcaster who draws on inherent magic from a gift or bloodline.",
+            "hit_die": 6,
+            "proficiencies": {
+                "saving_throws": ["Constitution", "Charisma"],
+                "skills": [
+                    {
+                        "choose": 2,
+                        "from": [
+                            "Arcana",
+                            "Deception",
+                            "Insight",
+                            "Intimidation",
+                            "Persuasion",
+                            "Religion"
+                        ]
+                    }
+                ],
+                "weapons": [
+                    "Dagger",
+                    "Dart",
+                    "Sling",
+                    "Quarterstaff",
+                    "Light Crossbow"
+                ]
+            },
+            "features": {
+                "1": ["Spellcasting", "Sorcerous Origin"],
+                "2": ["Font of Magic"],
+                "3": ["Metamagic"],
+                "4": ["Ability Score Improvement"],
+                "5": [],
+                "6": ["Sorcerous Origin Feature"],
+                "7": [],
+                "8": ["Ability Score Improvement"],
+                "9": [],
+                "10": ["Metamagic"],
+                "11": [],
+                "12": ["Ability Score Improvement"],
+                "13": [],
+                "14": ["Sorcerous Origin Feature"],
+                "15": [],
+                "16": ["Ability Score Improvement"],
+                "17": ["Metamagic"],
+                "18": ["Sorcerous Origin Feature"],
+                "19": ["Ability Score Improvement"],
+                "20": ["Sorcerous Restoration"]
+            },
+            "starting_equipment": [
+                {
+                    "choose": 1,
+                    "from": [
+                        [
+                            "Light Crossbow",
+                            {
+                                "quantity": 20,
+                                "item": "Crossbow Bolt"
+                            }
+                        ],
+                        {
+                            "choose": 1,
+                            "from": ["Simple Weapon"]
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Component Pouch", "Arcane Focus"]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Dungeoneer's Pack", "Explorer's Pack"]
+                },
+                {
+                    "quantity": 2,
+                    "item": "Dagger"
+                }
+            ],
+            "starting_gold": {
+                "dice": 3,
+                "faces": 4,
+                "multiplier": 10
+            },
+            "multiclass": {
+                "requirement": {
+                    "abilities": ["Charisma"]
+                }
+            }
+        },
+        "Warlock": {
+            "name": "Warlock",
+            "description": "A wielder of magic that is derived from a bargain with an extraplanar entity.",
+            "hit_die": 8,
+            "proficiencies": {
+                "saving_throws": ["Wisdom", "Charisma"],
+                "skills": [
+                    {
+                        "choose": 2,
+                        "from": [
+                            "Arcana",
+                            "Deception",
+                            "History",
+                            "Intimidation",
+                            "Investigation",
+                            "Nature",
+                            "Religion"
+                        ]
+                    }
+                ],
+                "armor": ["Light Armor"],
+                "weapons": ["Simple Weapon"]
+            },
+            "features": {
+                "1": ["Pact Magic", "Otherworldly Patron"],
+                "2": ["Eldritch Invocations"],
+                "3": ["Pact Boon"],
+                "4": ["Ability Score Improvement"],
+                "5": [],
+                "6": ["Otherworldly Patron Feature"],
+                "7": [],
+                "8": ["Ability Score Improvement"],
+                "9": [],
+                "10": ["Otherworldly Patron Feature"],
+                "11": ["Mystic Arcanum (6th level)"],
+                "12": ["Ability Score Improvement"],
+                "13": ["Mystic Arcanum (7th level)"],
+                "14": ["Otherworldly Patron Feature"],
+                "15": ["Mystic Arcanum (8th level)"],
+                "16": ["Ability Score Improvement"],
+                "17": ["Mystic Arcanum (9th level)"],
+                "18": [],
+                "19": ["Ability Score Improvement"],
+                "20": ["Eldritch Master"]
+            },
+            "starting_equipment": [
+                {
+                    "choose": 1,
+                    "from": [
+                        [
+                            "Light Crossbow",
+                            {
+                                "quantity": 20,
+                                "item": "Crossbow Bolt"
+                            }
+                        ],
+                        {
+                            "choose": 1,
+                            "from": ["Simple Weapons"]
+                        }
+                    ]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Component Pouch", "Arcane Focus"]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Scholar's Pack", "Dungeoneer's Pack"]
+                },
+                [
+                    "Leather Armor",
+                    {
+                        "choose": 1,
+                        "from": ["Simple Weapon"]
+                    },
+                    {
+                        "quantity": 2,
+                        "item": "Dagger"
+                    }
+                ]
+            ],
+            "starting_gold": {
+                "dice": 4,
+                "faces": 4,
+                "multiplier": 10
+            },
+            "multiclass": {
+                "requirement": {
+                    "abilities": ["Charisma"]
+                },
+                "proficiencies": {
+                    "armor": ["Light Armor"],
+                    "weapons": ["Simple Weapon"]
+                }
+            }
+        },
+        "Wizard": {
+            "name": "Wizard",
+            "description": "A scholarly magic-user capable of manipulating the structures of reality.",
+            "hit_die": 6,
+            "proficiencies": {
+                "saving_throws": ["Intelligence", "Wisdom"],
+                "skills": [
+                    {
+                        "choose": 2,
+                        "from": [
+                            "Arcana",
+                            "History",
+                            "Insight",
+                            "Investigation",
+                            "Medicine",
+                            "Religion"
+                        ]
+                    }
+                ],
+                "weapons": [
+                    "Dagger",
+                    "Dart",
+                    "Sling",
+                    "Quarterstaff",
+                    "Light Crossbow"
+                ]
+            },
+            "features": {
+                "1": ["Arcane Recovery", "Spellcasting"],
+                "2": ["Arcane Tradition"],
+                "3": [],
+                "4": ["Ability Score Improvement"],
+                "5": [],
+                "6": ["Arcane Tradition Feature"],
+                "7": [],
+                "8": ["Ability Score Improvement"],
+                "9": [],
+                "10": ["Arcane Tradition Feature"],
+                "11": [],
+                "12": ["Ability Score Improvement"],
+                "13": [],
+                "14": ["Arcane Tradition Feature"],
+                "15": [],
+                "16": ["Ability Score Improvement"],
+                "17": [],
+                "18": ["Spell Mastery"],
+                "19": ["Ability Score Improvement"],
+                "20": ["Signature Spells"]
+            },
+            "starting_equipment": [
+                {
+                    "choose": 1,
+                    "from": ["Quarterstaff", "Dagger"]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Component Pouch", "Arcane Focus"]
+                },
+                {
+                    "choose": 1,
+                    "from": ["Scholar's Pack", "Explorer's Pack"]
+                },
+                "Spellbook"
+            ],
+            "starting_gold": {
+                "dice": 4,
+                "faces": 4,
+                "multiplier": 10
+            },
+            "multiclass": {
+                "requirement": {
+                    "abilities": ["Intelligence"]
+                }
+            }
+        }
+    }
+}

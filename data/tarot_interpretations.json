@@ -1,0 +1,314 @@
+{
+    "the Fool": {
+        "Upright": "beginnings, freedom, innocence, originality, adventure, idealism, spontaneity",
+        "Reversed": "reckless, careless, distracted, naive, foolish, gullible, stale, dull"
+    },
+    "the Magician": {
+        "Upright": "willpower, desire, being resourceful, skill, ability, concentration, manifestation",
+        "Reversed": "manipulation, cunning, trickery, wasted talent, illusion, deception"
+    },
+    "the High Priestess": {
+        "Upright": "unconscious, intuition, mystery, spirituality, higher power, inner voice",
+        "Reversed": "repressed intuition, hidden motives, superficiality, confusion, cognitive dissonance"
+    },
+    "the Empress": {
+        "Upright": "divine feminine, sensuality, fertility, nurturing, creativity, beauty, abundance, nature",
+        "Reversed": "insecurity, overbearing, negligence, smothering, lack of growth, lack of progress"
+    },
+    "the Emperor": {
+        "Upright": "stability, structure, protection, authority, control, practicality, focus, discipline",
+        "Reversed": "tyrant, domineering, rigid, stubborn, lack of discipline, recklessness"
+    },
+    "the Hierophant": {
+        "Upright": "tradition, social groups, conventionality, conformity, education, knowledge, beliefs",
+        "Reversed": "rebellion, unconventionality, non-conformity, new methods, ignorance"
+    },
+    "the Lovers": {
+        "Upright": "love, unions, partnerships, relationships, choices, romance, balance, unity",
+        "Reversed": "disharmony, imbalance, conflict, detachment, bad choices, indecision"
+    },
+    "the Chariot": {
+        "Upright": "success, ambition, determination, willpower, control, self-discipline, focus",
+        "Reversed": "forceful, no direction, no control, powerless, aggression, obstacles"
+    },
+    "Strength": {
+        "Upright": "courage, bravery, confidence, compassion, self-confidence, inner power",
+        "Reversed": "self-doubt, weakness, low confidence, inadequacy, cowardice, forcefulness"
+    },
+    "the Hermit": {
+        "Upright": "self-reflection, introspection, contemplation, withdrawal, solitude, search for self",
+        "Reversed": "loneliness, isolation, recluse, being anti-social, rejection, returning to society"
+    },
+    "Wheel of Fortune": {
+        "Upright": "change, cycles, fate, decisive moments, luck, fortune, unexpected events",
+        "Reversed": "bad luck, lack of control, clinging to control, unwelcome changes, delays"
+    },
+    "Justice": {
+        "Upright": "justice, karma, consequence, accountability, law, truth, honesty, integrity, cause and effect",
+        "Reversed": "injustice, retribution, dishonesty, corruption, unfairness, avoiding accountability"
+    },
+    "the Hanged Man": {
+        "Upright": "sacrifice, waiting, uncertainty, lack of direction, perspective, contemplation",
+        "Reversed": "stalling, disinterest, stagnation, avoiding sacrifice, standstill, apathy"
+    },
+    "Death": {
+        "Upright": "transformation, endings, change, transition, letting go, release",
+        "Reversed": "fear of change, repeating negative patterns, resisting change, stagnancy, decay"
+    },
+    "Temperance": {
+        "Upright": "balance, peace, patience, moderation, calm, tranquillity, harmony, serenity",
+        "Reversed": "imbalance, excess, extremes, discord, recklessness, hastiness"
+    },
+    "the Devil": {
+        "Upright": "oppression, addiction, obsession, dependency, excess, powerlessness, limitations",
+        "Reversed": "independence, freedom, revelation, release, reclaiming power, reclaiming control"
+    },
+    "the Tower": {
+        "Upright": "disaster, destruction, upheaval, trauma, sudden change, chaos",
+        "Reversed": "averting disaster, delaying the inevitable, resisting change"
+    },
+    "the Star": {
+        "Upright": "hope, inspiration, positivity, faith, renewal, healing, rejuvenation",
+        "Reversed": "hopelessness, despair, negativity, lack of faith, despondent"
+    },
+    "the Moon": {
+        "Upright": "illusion, intuition, uncertainty, confusion, complexity, secrets, unconscious",
+        "Reversed": "fear, deception, anxiety, misunderstanding, misinterpretation, clarity, understanding"
+    },
+    "the Sun": {
+        "Upright": "happiness, success, optimism, vitality, joy, confidence, happiness, truth",
+        "Reversed": "blocked happiness, excessive enthusiasm, pessimism, unrealistic expectations, conceitedness"
+    },
+    "Judgement": {
+        "Upright": "self-evaluation, awakening, renewal, purpose, reflection, reckoning",
+        "Reversed": "self-doubt, lack of self-awareness, failure to learn lessons, self-loathing"
+    },
+    "the World": {
+        "Upright": "completion, achievement, fulfilment, sense of belonging, wholeness, harmony",
+        "Reversed": "lack of closure, lack of achievement, feeling incomplete, emptiness"
+    },
+    "the Ace of Wands": {
+        "Upright": "inspiration, creative spark, new initiative, new passion, enthusiasm, energy",
+        "Reversed": "delays, blocks, lack of passion, lack of energy, hesitancy, creative blocks"
+    },
+    "the Two of Wands": {
+        "Upright": "planning, first steps, making decisions, leaving comfort, taking risks",
+        "Reversed": "bad planning, overanalyzing, not taking action, playing it safe, avoiding risk"
+    },
+    "the Three of Wands": {
+        "Upright": "momentum, confidence, expansion, growth, foresight, looking ahead",
+        "Reversed": "restriction, limitations, lack of progress, obstacles, delays, frustration"
+    },
+    "the Four of Wands": {
+        "Upright": "community, home, celebrations, reunions, parties, gatherings, stability, belonging",
+        "Reversed": "lack of support, instability, feeling unwelcome, transience, lack of roots, home conflict"
+    },
+    "the Five of Wands": {
+        "Upright": "conflict, competition, arguments, aggression, tension, rivals, clashes of ego",
+        "Reversed": "end of conflict, cooperation, agreements, truces, harmony, peace, avoiding conflict"
+    },
+    "the Six of Wands": {
+        "Upright": "success, victory, triumph, rewards, recognition, praise, acclaim, pride",
+        "Reversed": "failure, lack of recognition, no rewards, lack of achievement"
+    },
+    "the Seven of Wands": {
+        "Upright": "protectiveness, standing up for yourself, defending yourself, protecting territory",
+        "Reversed": "giving up, admitting defeat, yielding, lack of self belief, surrender"
+    },
+    "the Eight of Wands": {
+        "Upright": "movement, speed, progress, quick decisions, sudden changes, excitement",
+        "Reversed": "waiting, slowness, chaos, delays, losing momentum, hastiness, being unprepared"
+    },
+    "the Nine of Wands": {
+        "Upright": "last stand, persistence, grit, resilience, perseverance, close to success, fatigue",
+        "Reversed": "stubbornness, rigidity, defensiveness, refusing compromise, giving up"
+    },
+    "the Ten of Wands": {
+        "Upright": "burden, responsibility, duty, stress, obligation, burning out, struggles",
+        "Reversed": "failure to delegate, shouldering too much responsibility, collapse, breakdown"
+    },
+    "the Page of Wands": {
+        "Upright": "adventure, excitement, fresh ideas, cheerfulness, energetic, fearless, extroverted",
+        "Reversed": "hasty, impatient, lacking ideas, tantrums, laziness, boring, unreliable, distracted"
+    },
+    "the Knight of Wands": {
+        "Upright": "courageous, energetic, charming, hero, rebellious, hot tempered, free spirit",
+        "Reversed": "arrogant, reckless, impatient, lack of self control, passive, volatile, domineering"
+    },
+    "the Queen of Wands": {
+        "Upright": "confident, self-assured, passionate, determined, social, charismatic, vivacious, optimistic",
+        "Reversed": "demanding, vengeful, low confidence, jealous, selfish, temperamental, bully"
+    },
+    "the King of Wands": {
+        "Upright": "leadership, vision, big picture, taking control, daring decisions, boldness, optimism",
+        "Reversed": "forceful, domineering, tyrant, vicious, powerless, ineffective, weak leader"
+    },
+    "the Ace of Pentacles": {
+        "Upright": "new opportunities, resources, abundance, prosperity, security, stability, manifestation",
+        "Reversed": "missed chances, scarcity, deficiency, instability, stinginess, bad investments"
+    },
+    "the Two of Pentacles": {
+        "Upright": "balancing resources, adaptation, resourcefulness, flexibility, stretching resources",
+        "Reversed": "imbalance, unorganized, overwhelmed, messiness, chaos, overextending"
+    },
+    "the Three of Pentacles": {
+        "Upright": "teamwork, shared goals, collaboration, apprenticeship, effort, pooling energy",
+        "Reversed": "lack of cohesion, lack of teamwork, apathy, poor motivation, conflict, ego, competition"
+    },
+    "the Four of Pentacles": {
+        "Upright": "possessiveness, insecurity, hoarding, stinginess, stability, security, savings, materialism, wealth, frugality, boundaries, guardedness",
+        "Reversed": "generosity, giving, spending, openness, financial insecurity, reckless spending"
+    },
+    "the Five of Pentacles": {
+        "Upright": "hardship, loss, isolation, feeling abandoned, adversity, struggle, unemployment, alienation, disgrace",
+        "Reversed": "positive changes, recovery from loss, overcoming adversity, forgiveness, feeling welcomed"
+    },
+    "the Six of Pentacles": {
+        "Upright": "generosity, charity, community, material help, support, sharing, giving and receiving, gratitude",
+        "Reversed": "power dynamics, abuse of generosity, strings attached gifts, inequality, extortion"
+    },
+    "the Seven of Pentacles": {
+        "Upright": "harvest, rewards, results, growth, progress, perseverance, patience, planning",
+        "Reversed": "unfinished work, procrastination, low effort, waste, lack of growth, setbacks, impatience, lack of reward"
+    },
+    "the Eight of Pentacles": {
+        "Upright": "skill, talent, craftsmanship, quality, high standards, expertise, mastery, commitment, dedication, accomplishment",
+        "Reversed": "lack of quality, rushed job, bad reputation, lack of motivation, mediocrity, laziness, low skill, dead-end job"
+    },
+    "the Nine of Pentacles": {
+        "Upright": "rewarded efforts, success, achievement, independence, leisure, material security, self-sufficiency",
+        "Reversed": "being guarded, living beyond means, material instability, reckless spending, superficiality"
+    },
+    "the Ten of Pentacles": {
+        "Upright": "legacy, roots, family, ancestry, inheritance, windfall, foundations, privilege, affluence, stability, tradition",
+        "Reversed": "family disputes, bankruptcy, debt, fleeting success, conflict over money, instability, breaking traditions"
+    },
+    "the Page of Pentacles": {
+        "Upright": "ambitious, diligent, goal oriented, planner, consistent, star student, studious, grounded, loyal, faithful, dependable",
+        "Reversed": "foolish, immature, irresponsible, lazy, underachiever, procrastinator, missed chances, poor prospects"
+    },
+    "the Knight of Pentacles": {
+        "Upright": "practical, reliable, efficient, stoic, slow and steady, hard-working, committed, patient, conservative",
+        "Reversed": "workaholic, laziness, dull, boring, no initiative, cheap, irresponsible, gambler, risky investments"
+    },
+    "the Queen of Pentacles": {
+        "Upright": "generous, caring, nurturing, homebody, good business sense, practical, comforting, welcoming, sensible, luxurious",
+        "Reversed": "selfish, unkempt, jealous, insecure, greedy, materialistic, gold digger, intolerant, self-absorbed, envious"
+    },
+    "the King of Pentacles": {
+        "Upright": "abundance, prosperity, security, ambitious, safe, kind, patriarchal, protective, businessman, provider, sensual, reliable",
+        "Reversed": "greed, materialistic, wasteful, chauvanist, poor financial decisions, gambler, exploitative, possessive"
+    },
+    "the Ace of Cups": {
+        "Upright": "love, new feelings, emotional awakening, creativity, spirituality, intuition",
+        "Reversed": "coldness, emptiness, emotional loss, blocked creativity, feeling unloved, gloominess"
+    },
+    "the Two of Cups": {
+        "Upright": "unity, partnership, attraction, connection, close bonds, joining forces, mutual respect",
+        "Reversed": "separation, rejection, division, imbalance, tension, bad communication, withdrawal"
+    },
+    "the Three of Cups": {
+        "Upright": "friendship, community, gatherings, celebrations, group events, social events",
+        "Reversed": "gossip, scandal, excess, isolation, loneliness, solitude, imbalanced social life"
+    },
+    "the Four of Cups": {
+        "Upright": "apathy, contemplation, feeling disconnected, melancholy, boredom, indifference, discontent",
+        "Reversed": "clarity, awareness, acceptance, choosing happiness, depression, negativity"
+    },
+    "the Five of Cups": {
+        "Upright": "loss, grief, disappointment, sadness, mourning, discontent, feeling let down",
+        "Reversed": "acceptance, moving on, finding peace, contentment, seeing positives"
+    },
+    "the Six of Cups": {
+        "Upright": "nostalgia, memories, familiarity, healing, comfort, sentimentality, pleasure",
+        "Reversed": "stuck in past, moving forward, leaving home, independence"
+    },
+    "the Seven of Cups": {
+        "Upright": "choices, searching for purpose, illusion, fantasy, daydreaming, wishful thinking, indecision",
+        "Reversed": "lack of purpose, disarray, confusion, diversion, distractions, clarity, making choices"
+    },
+    "the Eight of Cups": {
+        "Upright": "abandonment, walking away, letting go, searching for truth, leaving behind",
+        "Reversed": "stagnation, monotony, accepting less, avoidance, fear of change, staying in bad situation"
+    },
+    "the Nine of Cups": {
+        "Upright": "wishes coming true, contentment, satisfaction, success, achievements, recognition, pleasure",
+        "Reversed": "unhappiness, lack of fulfilment, disappointment, underachievement, arrogance, snobbery"
+    },
+    "the Ten of Cups": {
+        "Upright": "happiness, homecomings, fulfillment, emotional stability, security, domestic harmony",
+        "Reversed": "unhappy home, separation, domestic conflict, disharmony, isolation​"
+    },
+    "the Page of Cups": {
+        "Upright": "idealism, sensitivity, dreamer, naivete, innocence, inner child, head in the clouds",
+        "Reversed": "emotional vulnerability, immaturity, neglecting inner child, escapism, insecurity"
+    },
+    "the Knight of Cups": {
+        "Upright": "idealist, charming, artistic, graceful, tactful, diplomatic, mediator, negotiator",
+        "Reversed": "disappointment, tantrums, moodiness, turmoil, avoiding conflict, vanity"
+    },
+    "the Queen of Cups": {
+        "Upright": "compassion, warmth, kindness, intuition, healer, counsellor, supportive",
+        "Reversed": "insecurity, giving too much, overly-sensitive, needy, fragile, dependence, martyrdom"
+    },
+    "the King of Cups": {
+        "Upright": "wise, diplomatic, balance between head and heart, devoted, advisor, counsellor",
+        "Reversed": "overwhelmed, anxious, cold, repressed, withdrawn, manipulative, selfish"
+    },
+    "the Ace of Swords": {
+        "Upright": "clarity, breakthrough, new idea, concentration, vision, force, focus, truth",
+        "Reversed": "confusion, miscommunication, hostility, arguments, destruction, brutality"
+    },
+    "the Two of Swords": {
+        "Upright": "stalemate, difficult choices, stuck in the middle, denial, hidden information",
+        "Reversed": "indecision, hesitancy, anxiety, too much information, no right choice, truth revealed"
+    },
+    "the Three of Swords": {
+        "Upright": "heartbreak, separation, sadness, grief, sorrow, upset, loss, trauma, tears",
+        "Reversed": "healing, forgiveness, recovery, reconciliation, repressing emotions"
+    },
+    "the Four of Swords": {
+        "Upright": "rest, relaxation, peace, sanctuary, recuperation, self-protection, rejuvenation",
+        "Reversed": "recovery, awakening, re-entering world, release from isolation, restlessness, burnout"
+    },
+    "the Five of Swords": {
+        "Upright": "arguments, disputes, aggression, bullying, intimidation, conflict, hostility, stress",
+        "Reversed": "reconciliation, resolution, compromise, revenge, regret, remorse, cutting losses"
+    },
+    "the Six of Swords": {
+        "Upright": "moving on, departure, leaving behind, distance, accepting lessons",
+        "Reversed": "stuck in past, returning to trouble, running away from problems, trapped"
+    },
+    "the Seven of Swords": {
+        "Upright": "lies, trickery, scheming, strategy, resourcefulness, sneakiness, cunning",
+        "Reversed": "confession, conscience, regret, maliciousness, truth revealed"
+    },
+    "the Eight of Swords": {
+        "Upright": "trapped, restricted, victimised, paralysed, helpless, powerless, imprisonment",
+        "Reversed": "freedom, release, taking control, survivor, facing fears, empowered, surrender"
+    },
+    "the Nine of Swords": {
+        "Upright": "fear, anxiety, negativity, breaking point, despair, nightmares, isolation",
+        "Reversed": "recovery, learning to cope, facing life, finding help, shame, guilt, mental health issues"
+    },
+    "the Ten of Swords": {
+        "Upright": "ruin, failure, bitterness, collapse, exhaustion, dead end, victimization, betrayal",
+        "Reversed": "survival, improvement, healing, lessons learned, despair, relapse"
+    },
+    "the Page of Swords": {
+        "Upright": "curious, witty, chatty, communicative, inspired, vigilant, alert, mental agility",
+        "Reversed": "scatterbrained, cynical, sarcastic, gossipy, insulting, rude, lack of planning"
+    },
+    "the Knight of Swords": {
+        "Upright": "assertive, direct, impatient, intellectual, daring, focused, perfectionist, ambitious",
+        "Reversed": "rude, tactless, forceful, bully, aggressive, vicious, ruthless, arrogant"
+    },
+    "the Queen of Swords": {
+        "Upright": "honest, independent, principled, fair, constructive criticism, objective, perceptive",
+        "Reversed": "pessimistic, malicious, manipulative, harsh, bitter, spiteful, cruel, deceitful, unforgiving"
+    },
+    "the King of Swords": {
+        "Upright": "reason, authority, discipline, integrity, morality, serious, high standards, strict",
+        "Reversed": "irrational, dictator, oppressive, inhumane, controlling, cold, ruthless, dishonest"
+    }
+}
