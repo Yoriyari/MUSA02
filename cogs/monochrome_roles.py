@@ -50,7 +50,7 @@ from enum import Enum
 class Monochrome:
     def __init__(self, names={}, roles={}):
         self.names = names
-        self.roles = roles
+        self.roles = {role.value for role in roles}
 
 class Pronouns(Enum):
     HE_HIM = 1034197313381470291
