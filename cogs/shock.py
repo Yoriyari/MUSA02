@@ -237,7 +237,7 @@ class Shock(commands.Cog):
         '''Ensures the forgot timer is restarted or stopped for each
         interaction.
         '''
-        if not is_any_collar_online():
+        if not self.is_any_collar_online():
             self.forgot_timer.cancel()
             return
         if self.forgot_timer.is_running():
