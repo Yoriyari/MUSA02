@@ -1,9 +1,10 @@
 #===============================================================================
-# Shock v1.2.11
+# Shock v1.2.12
 # by Yoriyari
 #===============================================================================
 # Update History
 # ..............................................................................
+# 25 Mar 2025 - v1.2.12; Fixed update_forgot_timer invoking the old cache. -YY
 # 23 Mar 2025 - v1.2.11; Separated PiShock info to a JSON including usernames,
 #               device codes, API keys, long-term toggles. Created a Collar
 #               class. Centralized servers whitelisted for NSFW commands. -YY
@@ -236,7 +237,7 @@ class Shock(commands.Cog):
         '''Ensures the forgot timer is restarted or stopped for each
         interaction.
         '''
-        if sum(self.cached_toggles.values()) == 0:
+        if not is_any_collar_online():
             self.forgot_timer.cancel()
             return
         if self.forgot_timer.is_running():
