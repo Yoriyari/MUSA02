@@ -1,9 +1,10 @@
 #===============================================================================
-# Family Share v1.3.7
+# Family Share v1.3.8
 # by Yoriyari
 #===============================================================================
 # Update History
 # ..............................................................................
+# 02 Apr 2025 - v1.3.8; Fixed unvetted games getting skipped by Steam sync. -YY
 # 23 Mar 2025 - v1.3.7; Moved user library database to secrets folder. -YY
 # 20 Mar 2025 - v1.3.6; Made strings with escape characters raw strings. -YY
 # 09 Feb 2025 - v1.3.5; Expanded family sharing to allow inviting members
@@ -891,7 +892,7 @@ def query_games_of_user(user, steam_client, api=None, data=None):
     call = api.IPlayerService.GetOwnedGames(steamid=user["steam_id"],
             include_appinfo=True, include_played_free_games=False,
             appids_filter=[], include_free_sub=False, language="en",
-            include_extended_appinfo=False)
+            include_extended_appinfo=False, skip_unvetted_apps=False)
     games = []
     if "response" in call and "games" in call["response"]:
         games = call["response"]["games"]
