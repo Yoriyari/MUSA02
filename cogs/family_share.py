@@ -4,6 +4,9 @@
 #===============================================================================
 # Update History
 # ..............................................................................
+# 07 Apr 2025 - v1.4.0; Any non-command parameters after the main command now
+#               get treated as a search query command instead of ignoring the
+#               parameters and doing a roll. -YY
 # 02 Apr 2025 - v1.3.8; Fixed unvetted games getting skipped by Steam sync. -YY
 # 23 Mar 2025 - v1.3.7; Moved user library database to secrets folder. -YY
 # 20 Mar 2025 - v1.3.6; Made strings with escape characters raw strings. -YY
@@ -107,9 +110,12 @@ class FamilyShare(commands.Cog):
         print("Family Share cog loaded.")
 
     @commands.group(name="familyshare", aliases=["family_share", "steam", "steamgame", "steam_game", "steamgames", "steam_games", "suggestgame", "suggest_game", "randomgame", "random_game", "game", "gaming", "games"], case_insensitive=True, invoke_without_command=True)
-    async def familyshare(self, ctx):
+    async def familyshare(self, ctx, *query):
         try:
-            await handle_familyshare(ctx.channel.send, str(ctx.author.id))
+            if query:
+                await handle_search(ctx.channel.send, str(ctx.author.id), " ".join(query))
+            else:
+                await handle_familyshare(ctx.channel.send, str(ctx.author.id))
         except Exception as e:
             await send_error(self.client, e, reference=ctx.message.jump_url)
 

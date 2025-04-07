@@ -636,7 +636,7 @@ familyshare:
         \nExample usage: `!game link Yoriyari`
         \nSuggests a random game from your Steam library. You need to go through a one-time setup to tell me what your Steam library is and, if applicable, who you've set up Steam family-sharing with. Each Steam library should be publicly visible for this. Received suggestions can optionally be removed from your suggestions pool or skipped for later. You can check what percentage of games has been removed from the pool.
         \n### Game suggestions
-        \n- `!steam`: Suggests a game.
+        \n- `!steam [query]`: Suggests a game. If you append a query, this instead performs a library search.
         \n- `!steam percentage`: Displays the percentage of games which have been set to \"Don't Suggest Again\".
         \n- `!steam hidden`: Lists all game titles which have been set to \"Don't Suggest Again\".
         \n- `!steam hide <title>`: Sets a game title to \"Don't Suggest Again\" without needing to roll it.
