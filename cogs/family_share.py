@@ -1,9 +1,12 @@
 #===============================================================================
-# Family Share v1.3.8
+# Family Share v1.4.1
 # by Yoriyari
 #===============================================================================
 # Update History
 # ..............................................................................
+# 05 May 2025 - v1.4.1; Fixed Steam IDs being added while already registered to
+#               your family resulting in an error message saying they're already
+#               registered to someone else's family. -YY
 # 07 Apr 2025 - v1.4.0; Any non-command parameters after the main command now
 #               get treated as a search query command instead of ignoring the
 #               parameters and doing a roll. -YY
@@ -787,6 +790,10 @@ async def add_steam_user_to_family(send_method, author_id, steam_id, data):
         family_id = generate_new_family_id(data)
         data["users"][author_id]["family"] = family_id
         data["families"][family_id] = {"members": {author_id: "Discord"}, "shared_games": []}
+    if steam_id in data["families"][family_id]["members"]:
+        msg = get_msg_target_already_in_same_family(target)
+        await send_method(content=msg)
+        return
     if len(data["families"][family_id]["members"]) >= MAX_FAMILY_SIZE:
         msg = get_msg_users_family_at_max_capacity()
         await send_method(content=msg)
