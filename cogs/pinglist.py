@@ -1,9 +1,10 @@
 #===============================================================================
-# PingList v1.3.5
+# PingList v1.3.6
 # by Yoriyari
 #===============================================================================
 # Update History
 # ..............................................................................
+# 09 May 2025 - v1.3.6; Hardcoded new free react ID in Stonecutters. -YY
 # 23 Mar 2025 - v1.3.5; Hid Mudae's Discord ID from file. Moved database to
 #               secrets folder. -YY
 # 20 Mar 2025 - v1.3.4; Made strings with escape characters raw strings. -YY
@@ -328,7 +329,8 @@ class PingList(commands.Cog):
         for component in message.components: # Halt if all reacts are free
             if type(component) == discord.ActionRow and component.children:
                 for child in component.children:
-                    if type(child) == discord.Button and child.emoji and child.emoji.id not in [609264156347990016, 513832682485055509]:
+                    if (type(child) == discord.Button and child.emoji and
+                            child.emoji.id not in [609264156347990016, 513832682485055509, 1308044033519652894]):
                         return False
         return True
 
