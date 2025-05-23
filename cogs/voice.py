@@ -1,9 +1,10 @@
 #===============================================================================
-# Voice v1.6.4
+# Voice v1.6.5
 # by Yoriyari
 #===============================================================================
 # Update History
 # ..............................................................................
+# 23 May 2025 - v1.6.5; Added login cookie for restricted YouTube videos. -YY
 # 20 Mar 2025 - v1.6.4; Made strings with escape characters raw strings. -YY
 # 17 Dec 2024 - v1.6.3; Removed hardcoded "Musa" reading due to Google API
 #               update. -YY
@@ -180,7 +181,7 @@ class ActiveVoiceChannel:
                     except Exception as e:
                         print(e)
                         self.play_queue()
-                command = ["yt-dlp", "-g", "-x", f"{url}"]
+                command = ["yt-dlp", "-g", "-x", "--cookies-from-browser", "chromium", f"{url}"]
                 p = subprocess.Popen(command, stdout=subprocess.PIPE)
                 text = p.stdout.read().splitlines()
                 p.wait()
