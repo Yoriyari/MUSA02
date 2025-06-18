@@ -1,9 +1,10 @@
 #===============================================================================
-# PingList v1.3.6
+# PingList v1.3.7
 # by Yoriyari
 #===============================================================================
 # Update History
 # ..............................................................................
+# 18 Jun 2025 - v1.3.7; Changed fallback card detection response to False. -YY
 # 09 May 2025 - v1.3.6; Hardcoded new free react ID in Stonecutters. -YY
 # 23 Mar 2025 - v1.3.5; Hid Mudae's Discord ID from file. Moved database to
 #               secrets folder. -YY
@@ -426,7 +427,7 @@ class PingList(commands.Cog):
             return True #Embed is a character roll with rank(s) enabled
         if message.components and len(message.components) == 1 and message.components[0].type == discord.ComponentType.action_row and message.components[0].children and len(message.components[0].children) == 1 and message.components[0].children[0].type == discord.ComponentType.button:
             return True #Probably using optional heart button react
-        return True #Whatever
+        return False
 
     def message_is_a_claimed_character_roll(self, message):
         '''Returns True if the a message is a Mudae message with a claimed
