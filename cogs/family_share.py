@@ -1,9 +1,11 @@
 #===============================================================================
-# Family Share v1.4.1
+# Family Share v1.4.2
 # by Yoriyari
 #===============================================================================
 # Update History
 # ..............................................................................
+# 08 Jul 2025 - v1.4.2; Fixed Steam-only family members being skipped when
+#               syncing all user libraries. -YY
 # 05 May 2025 - v1.4.1; Fixed Steam IDs being added while already registered to
 #               your family resulting in an error message saying they're already
 #               registered to someone else's family. -YY
@@ -834,9 +836,14 @@ def sync_all_libraries(data=None):
         if user["family"] not in family_libraries:
             family_libraries[user["family"]] = []
         family_libraries[user["family"]] += shared_games
-    steam_client.disconnect()
     for family, games in family_libraries.items():
+        for id, type in data["families"][family]["members"].items():
+            if type == "Steam":
+                user = initialize_database_user_dict(steam_id=id, family=family)
+                shared_games, _ = query_games_of_user(user, steam_client, api, data)
+                games += shared_games
         data["families"][family]["shared_games"] = list(set(games))
+    steam_client.disconnect()
     write_to_json(FAMILY_SHARE_FILE, data)
 
 def is_user_library_populated(user_id, api=None, data=None):
