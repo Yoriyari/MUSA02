@@ -1,9 +1,10 @@
 #===============================================================================
-# Family Share v1.4.2
+# Family Share v1.4.3
 # by Yoriyari
 #===============================================================================
 # Update History
 # ..............................................................................
+# 28 Aug 2025 - v1.4.3; Fixed apps without 'common' metadata halting syncs. -YY
 # 08 Jul 2025 - v1.4.2; Fixed Steam-only family members being skipped when
 #               syncing all user libraries. -YY
 # 05 May 2025 - v1.4.1; Fixed Steam IDs being added while already registered to
@@ -944,6 +945,9 @@ def get_exfgls_shareability(games, steam_client):
         appids = unknown_game_ids[i:i+100]
         unknown_info = steam_client.get_product_info(apps=appids, timeout=3)
         for id, game in unknown_info["apps"].items():
+            if "common" not in game:
+                exfgls_db[str(id)] = True
+                continue
             if "exfgls" in game["common"] and game["common"]["exfgls"]:
                 exfgls_db[str(id)] = True
                 unshared_games.append(game["common"]["name"].strip())
